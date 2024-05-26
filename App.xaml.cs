@@ -8,10 +8,11 @@ namespace BLOGSOCIALUDLA
         {
             InitializeComponent();
 
-            MainPage = new LoginView();
+           // MainPage = new LoginView();
+            MainPage = new InicioSesion();
 
-           //Registro Cuenta 
-          //  MainPage = new PaginaPrincipal();
+            //Registro Cuenta 
+            //  MainPage = new PaginaPrincipal();
 
         }
     }

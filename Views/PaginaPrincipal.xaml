@@ -6,6 +6,7 @@
     <Grid BackgroundColor="White" RowDefinitions=".05*,.1*,.45*,.05*,.05*,.3*">
         <Label FontSize="16"
        HorizontalOptions="Center"
+       FontFamily="PoppinsSemiBold"
        Text="Nuestras Facultades"
        TextColor="DarkRed"
        VerticalOptions="Center" />
