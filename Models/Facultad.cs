@@ -8,6 +8,7 @@ namespace BLOGSOCIALUDLA.Models
 {
     public class Facultad
     {
+        //Prueba para el commit
         public string Name { get; set; }
         public TimeSpan ReadTime { get; set; }
 
