@@ -57,6 +57,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Models\Facultades.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\Fonts\Poppins-Bold.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-ExtraBold.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-Medium.ttf" />
@@ -71,6 +75,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\InicioSesion.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\LoginView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

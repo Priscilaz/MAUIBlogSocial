@@ -4,29 +4,80 @@
              x:Class="BLOGSOCIALUDLA.Views.LoginView"
              Title="LoginView">
     
-    <Grid RowDefinitions=".3*,.7*" Margin="0">
+    <Grid RowDefinitions=".3*,.4*" Margin="0">
         <Image Aspect="AspectFill" Source="https://arquitecturapanamericana.com/wp-content/uploads/2017/03/FOTOGRAFIA-SELECCIONADA-106.jpg"></Image>
         <Grid BackgroundColor="White"
-         Opacity=".2"  >
+              
+         Opacity=".20"  >
             
         </Grid>
         <Grid Grid.Row="1">
             
-            <RoundRectangle Margin="-5,-30,-5,-2"
+            <RoundRectangle Margin="-5,-20,-5,-2"
                             CornerRadius="30,30,0,0"
                             Fill="white"/>
             <Image Aspect="AspectFit"
-    HeightRequest="70" Margin="5,-500,-5,-2"
-    Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png"
-    />
+                    HeightRequest="85" Margin="5,-380,-5,-2"
+                    Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png"
+            />
+            <VerticalStackLayout Margin="90,80,90,0" HorizontalOptions="Center" >
+                <Label FontAttributes="Bold"
+                       WidthRequest="233"
+                       HeightRequest="70"
+                       FontFamily="PoppinsBold"
+                       FontSize="Title"
+                       Text="Bienvenido a SocialUdla!"
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center"
+                        Margin="0,0,0,25"
+                       />
+            
+                 <Label FontFamily="PoppinsMedium"
+                       FontSize="Header"
+                       Text="Para poder ingresar debes Iniciar Sesión"
+                       TextColor="DarkSlateGrey"
+                       HeightRequest="24"
+                       WidthRequest="324"
+                       HorizontalOptions="Center" 
+                      HorizontalTextAlignment="Center"
+                        
+                        Margin="0,0,0,30"
+                />
+                <Button BackgroundColor="#8D2232"
+                        WidthRequest="350"
+                        HeightRequest="75"
+                        FontFamily="PoppinsSemiBold" 
+                        FontSize="Medium"
+                        Text="Iniciar Sesión"
+                    
+                        TextColor="White"
+                        Margin="0,0,0,40"
+                        Clicked="ClickLogin"
+                        >
+                </Button>
+
+                <Label FontFamily="PoppinsMedium"
+                    FontSize="Small"
+                    Text="¿No tienes una cuenta?"
+                    TextColor="Grey"
+                    HorizontalOptions="CenterAndExpand" 
+                     Margin="0,0,0,10"
+
+                   />
+                <Label FontFamily="PoppinsBold"
+                  FontSize="Header"
+                  Text="Registrate"
+                  TextColor="DarkSlateGrey"
+                  HorizontalOptions="CenterAndExpand" 
+                  TextDecorations="Underline" 
+                 />         
+            </VerticalStackLayout>
+           
+
+
         </Grid>
     
     </Grid>
 </ContentPage>
-<!--<Grid ColumnDefinitions="*,*" >
-    <Image Aspect="AspectFit"
-       HeightRequest="120"
-       Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png"
-       />
-</Grid>--> 
  

@@ -10,8 +10,8 @@ namespace BLOGSOCIALUDLA
 
             MainPage = new LoginView();
 
-            //Registro Cuenta 
-            MainPage = new RegistroCuenta();
+           //Registro Cuenta 
+          //  MainPage = new PaginaPrincipal();
 
         }
     }
