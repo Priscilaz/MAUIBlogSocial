@@ -10,7 +10,7 @@ namespace BLOGSOCIALUDLA
 
             var navPage= new NavigationPage(new LoginView());
             navPage.Background = Colors.DarkRed;
-            navPage.BarTextColor = Colors.White;
+            navPage.BarTextColor = Colors.DarkRed;
 
             MainPage = navPage;
             //MainPage = new InicioSesion();
