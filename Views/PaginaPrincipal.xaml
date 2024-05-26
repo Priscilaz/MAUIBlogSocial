@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BLOGSOCIALUDLA.Views.PaginaPrincipal"
-             Title="PaginaPrincipal">
+             Title="Página Principal">
     <Grid BackgroundColor="White" RowDefinitions=".05*,.1*,.45*,.05*,.05*,.3*">
         <Label FontSize="16"
        HorizontalOptions="Center"
