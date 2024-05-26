@@ -66,6 +66,16 @@
 	  <None Remove="Resources\Fonts\Poppins-Medium.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-Regular.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-SemiBold.ttf" />
+	  <None Remove="Resources\Images\arquitectura.jpg" />
+	  <None Remove="Resources\Images\derecho.jpg" />
+	  <None Remove="Resources\Images\economia.jpg" />
+	  <None Remove="Resources\Images\fica.jpg" />
+	  <None Remove="Resources\Images\gastronomia.jpg" />
+	  <None Remove="Resources\Images\medicina.jpg" />
+	  <None Remove="Resources\Images\musica.png" />
+	  <None Remove="Resources\Images\nodo.jpg" />
+	  <None Remove="Resources\Images\odontologia.jpg" />
+	  <None Remove="Resources\Images\psicologia.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
