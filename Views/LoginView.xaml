@@ -50,10 +50,10 @@
                         FontFamily="PoppinsSemiBold" 
                         FontSize="Medium"
                         Text="Iniciar Sesión"
-                    
+                        Clicked="ClickLogin"
                         TextColor="White"
                         Margin="0,0,0,40"
-                        Clicked="ClickLogin"
+                         
                         >
                 </Button>
 

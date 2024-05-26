@@ -8,8 +8,12 @@ namespace BLOGSOCIALUDLA
         {
             InitializeComponent();
 
-           // MainPage = new LoginView();
-            MainPage = new InicioSesion();
+            var navPage= new NavigationPage(new LoginView());
+            navPage.Background = Colors.DarkRed;
+            navPage.BarTextColor = Colors.White;
+
+            MainPage = navPage;
+            //MainPage = new InicioSesion();
 
             //Registro Cuenta 
             //  MainPage = new PaginaPrincipal();
