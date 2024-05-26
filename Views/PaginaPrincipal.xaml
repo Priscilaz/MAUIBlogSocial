@@ -22,7 +22,7 @@
                TextColor="Black"
                VerticalOptions="Center"/>
         </Grid>
-        <CarouselView  Grid.Row="2" IndicatorView="indicatorView" ItemsSource="{Binding Facultades}"
+            <CarouselView  Grid.Row="2" IndicatorView="indicatorView" ItemsSource="{Binding Facultades}"
                        PeekAreaInsets="30">
             <CarouselView.ItemsLayout>
                 <LinearItemsLayout
@@ -90,6 +90,21 @@
             </CarouselView.ItemTemplate>
 
         </CarouselView>
+
+            <IndicatorView 
+                x:Name="indicatorView"
+                Grid.Row="3"
+                HorizontalOptions="Center"
+                IndicatorColor="#616161"
+                IndicatorSize="8"
+                SelectedIndicatorColor="DarkRed"
+                VerticalOptions="Center"/>
+            <Label Grid.Row="4"
+                Margin="25,10,25,10"
+                FontSize="16"
+                Text="Servicios Recomendados"
+                TextColor="DarkRed"
+                VerticalOptions="Center"/>
 
     </Grid>
 
