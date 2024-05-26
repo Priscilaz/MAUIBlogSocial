@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BLOGSOCIALUDLA.Views.LoginView"
-             Title="LoginView">
-    
+             x:Class="BLOGSOCIALUDLA.Views.RegistroCuenta"
+             Title="RegistroCuenta">
+
     <Grid RowDefinitions=".3*,.7*" Margin="0">
         <Image Aspect="AspectFill" Source="https://arquitecturapanamericana.com/wp-content/uploads/2017/03/FOTOGRAFIA-SELECCIONADA-106.jpg"></Image>
         <Grid BackgroundColor="White"
@@ -16,17 +16,11 @@
                             CornerRadius="30,30,0,0"
                             Fill="white"/>
             <Image Aspect="AspectFit"
-    HeightRequest="70" Margin="5,-500,-5,-2"
-    Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png"
+            HeightRequest="70" Margin="5,-500,-5,-2"
+            Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png"
+
     />
         </Grid>
     
     </Grid>
 </ContentPage>
-<!--<Grid ColumnDefinitions="*,*" >
-    <Image Aspect="AspectFit"
-       HeightRequest="120"
-       Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png"
-       />
-</Grid>--> 
- 

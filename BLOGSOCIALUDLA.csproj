@@ -57,7 +57,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\UdlaImagen.jpg" />
+	  <None Remove="Resources\Fonts\Poppins-Bold.ttf" />
+	  <None Remove="Resources\Fonts\Poppins-ExtraBold.ttf" />
+	  <None Remove="Resources\Fonts\Poppins-Medium.ttf" />
+	  <None Remove="Resources\Fonts\Poppins-Regular.ttf" />
+	  <None Remove="Resources\Fonts\Poppins-SemiBold.ttf" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -68,6 +72,12 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Views\LoginView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\PaginaPrincipal.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\RegistroCuenta.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

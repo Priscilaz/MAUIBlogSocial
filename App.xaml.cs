@@ -1,4 +1,6 @@
-﻿namespace BLOGSOCIALUDLA
+﻿using BLOGSOCIALUDLA.Views;
+
+namespace BLOGSOCIALUDLA
 {
     public partial class App : Application
     {
@@ -6,7 +8,11 @@
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new LoginView();
+
+            //Registro Cuenta 
+            MainPage = new RegistroCuenta();
+
         }
     }
 }
