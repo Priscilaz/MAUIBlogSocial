@@ -9,7 +9,7 @@ public partial class LoginView : ContentPage
 
     private void ClickLogin(object sender, EventArgs e)
     {
-		Navigation.PushAsync(new InicioSesion());//uno sobre otro
+		Navigation.PushAsync(new InicioSesion());//uno sobre otra pestaña
        
     }
 }
