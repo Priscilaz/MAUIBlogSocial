@@ -9,6 +9,7 @@ public partial class LoginView : ContentPage
 
     private void ClickLogin(object sender, EventArgs e)
     {
-		Navigation.PushAsync(new InicioSesion());
+		Navigation.PushAsync(new InicioSesion());//uno sobre otro
+       
     }
 }
