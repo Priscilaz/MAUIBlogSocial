@@ -66,11 +66,14 @@
 
 
                                 <VerticalStackLayout Grid.Row="2" Margin="20,0,0,0">
+                                    
+                                    <Label FontSize="Medium"
+                                           FontFamily="PoppinsSemiBold"
+                                           Text="{Binding Name}"
+                                           TextColor="White"/>
                                     <Label Text="{Binding ReadTime, StringFormat='Tiempo de Lectura: {0:%m} mins'}"
-                                       TextColor="White"/>
-                                    <Label FontSize="Large"
-                                       Text="{Binding Name}"
-                                       TextColor="White"/>
+                                           FontFamily="PoppinsSemiBold"
+                                           TextColor="White"/>
 
                                 </VerticalStackLayout>
                             </Grid>
@@ -102,6 +105,7 @@
             <Label Grid.Row="4"
                 Margin="25,5,25,5"
                 FontSize="16"
+                FontFamily="PoppinsSemiBold"   
                 Text="Servicios Recomendados"
                 TextColor="DarkRed"
                 VerticalOptions="Center"/>
