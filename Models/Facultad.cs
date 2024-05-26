@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace BLOGSOCIALUDLA.Models
 {
-    internal class Facultad
+    public class Facultad
     {
+        public string Name { get; set; }
+        public TimeSpan ReadTime { get; set; }
+
+        public string Image { get; set; }
     }
 }
