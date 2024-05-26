@@ -10,6 +10,18 @@
        Text="Nuestras Facultades"
        TextColor="DarkRed"
        VerticalOptions="Center" />
+        <Grid Grid.Row="1" Margin="25,10,25,10">
+            <RoundRectangle
+        CornerRadius="25"
+        Fill="WhiteSmoke"
+        HeightRequest="45"/>
+            <SearchBar
+               CancelButtonColor="DarkRed"
+               Placeholder="Buscar por nombre"
+               PlaceholderColor="Black"
+               TextColor="Black"
+               VerticalOptions="Center"/>
+        </Grid>
 
     </Grid>
 
