@@ -3,25 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BLOGSOCIALUDLA.Views.RegistroCuenta"
              Title="RegistroCuenta">
+    
+    <Grid RowDefinitions=".3*,*"
+          Margin="0">
 
-    <Grid RowDefinitions=".3*,.7*" Margin="0">
-        <Image Aspect="AspectFill" Source="https://arquitecturapanamericana.com/wp-content/uploads/2017/03/FOTOGRAFIA-SELECCIONADA-106.jpg"></Image>
+        <Image Aspect="AspectFill"
+               Source="https://arquitecturapanamericana.com/wp-content/uploads/2017/03/FOTOGRAFIA-SELECCIONADA-106.jpg" />
+
         <Grid BackgroundColor="White"
-         Opacity=".2"  >
-            
-        </Grid>
+              Opacity=".2" />
+
         <Grid Grid.Row="1">
 
             <RoundRectangle Margin="-5,-30,-5,-2"
-                            CornerRadius="30,30,0,0"
-                            Fill="white"/>
-            <Image Aspect="AspectFit"
-            HeightRequest="70" Margin="5,-500,-5,-2"
-            Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png"/>
+                             CornerRadius="30,30,0,0"
+                             Fill="White" />
 
-            <VerticalStackLayout Margin="90,80,90,0" HorizontalOptions="Center">
+            <Image Aspect="AspectFit"
+                   HeightRequest="70"
+                   Margin="5,-500,-5,-2"
+                   Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png" />
+
+            <VerticalStackLayout Margin="20"
+                                 HorizontalOptions="Center">
+
                 <Label FontAttributes="Bold"
-                       WidthRequest="233"
+                       WidthRequest="300"
                        HeightRequest="70"
                        FontFamily="PoppinsBold"
                        FontSize="Title"
@@ -44,34 +51,39 @@
                 <Entry x:Name="Nombres"
                        Placeholder="Nombres"
                        FontSize="18"
+                       WidthRequest="300"
                        Margin="0,0,0,10" />
 
                 <Entry x:Name="Apellidos"
                        Placeholder="Apellidos"
                        FontSize="18"
+                       WidthRequest="300"
                        Margin="0,0,0,10" />
 
                 <Entry x:Name="NumeroTelefono"
                        Placeholder="Número Celular"
                        Keyboard="Telephone"
                        FontSize="18"
+                       WidthRequest="300"
                        Margin="0,0,0,10" />
 
                 <Entry x:Name="Correo"
                        Placeholder="Correo Electrónico"
                        Keyboard="Email"
                        FontSize="18"
+                       WidthRequest="300"
                        Margin="0,0,0,10" />
 
                 <Entry x:Name="Contrasena"
                        Placeholder="Contraseña"
                        IsPassword="True"
                        FontSize="18"
+                       WidthRequest="300"
                        Margin="0,0,0,20" />
 
                 <Button BackgroundColor="#8D2232"
-                        WidthRequest="350"
-                        HeightRequest="75"
+                        WidthRequest="300"
+                        HeightRequest="50"
                         FontFamily="PoppinsSemiBold"
                         FontSize="Medium"
                         Text="Registrarse"
@@ -79,8 +91,8 @@
                         Margin="0,0,0,20" />
 
                 <Button BackgroundColor="#8D2232"
-                        WidthRequest="350"
-                        HeightRequest="75"
+                        WidthRequest="300"
+                        HeightRequest="50"
                         FontFamily="PoppinsSemiBold"
                         FontSize="Medium"
                         Text="Iniciar Sesión"
@@ -102,6 +114,9 @@
                        TextDecorations="Underline" />
 
             </VerticalStackLayout>
+
         </Grid>
+
     </Grid>
+
 </ContentPage>
