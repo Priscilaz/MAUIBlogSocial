@@ -3,29 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BLOGSOCIALUDLA.Views.RegistroCuenta"
              Title="RegistroCuenta">
-
     <Grid RowDefinitions=".3*,.4*" Margin="0">
-        <Image Aspect="AspectFill" Source="https://arquitecturapanamericana.com/wp-content/uploads/2017/03/FOTOGRAFIA-SELECCIONADA-106.jpg"></Image>
-        <Grid BackgroundColor="White"
-         Opacity=".2"  >
-            
-        </Grid>
+
+        <Image Aspect="AspectFill" Source="https://arquitecturapanamericana.com/wp-content/uploads/2017/03/FOTOGRAFIA-SELECCIONADA-106.jpg" />
+
+        <Grid BackgroundColor="White" Opacity=".20" />
+
         <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5,-20,-5,-2" 
+                            CornerRadius="30,30,0,0"
+                            Fill="white" />
 
-            <BoxView Color="White"
-                     CornerRadius="30,30,0,0"
-                     Margin="-5,-30,-5,-2" />
             <Image Aspect="AspectFit"
-            HeightRequest="70" Margin="5,-500,-5,-2"
-            Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png"/>
+                   HeightRequest="85"
+                   Margin="5,-380,-5,-2"
+                   Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png" />
 
-            <StackLayout Margin="90,80,90,0" HorizontalOptions="Center">
+            <VerticalStackLayout Margin="90,80,90,0" HorizontalOptions="Center">
                 <Label FontAttributes="Bold"
                        WidthRequest="233"
                        HeightRequest="70"
                        FontFamily="PoppinsBold"
                        FontSize="Title"
-                       Text="¡Bienvenid@ a SocialUdla!"
+                       Text="Bienvenido a SocialUdla!"
                        TextColor="Black"
                        HorizontalOptions="Center"
                        HorizontalTextAlignment="Center"
@@ -89,23 +89,18 @@
 
                 <Label FontFamily="PoppinsMedium"
                        FontSize="Small"
-                       Text="¿Necesitas Ayuda?"
+                       Text="¿No tienes una cuenta?"
                        TextColor="Grey"
                        HorizontalOptions="CenterAndExpand"
                        Margin="0,0,0,10" />
 
                 <Label FontFamily="PoppinsBold"
                        FontSize="Header"
-                       Text="Ayuda"
+                       Text="Registrate"
                        TextColor="DarkSlateGrey"
                        HorizontalOptions="CenterAndExpand"
                        TextDecorations="Underline" />
-
-
-            </StackLayout>
-              
+            </VerticalStackLayout>
         </Grid>
-
-    
     </Grid>
 </ContentPage>
