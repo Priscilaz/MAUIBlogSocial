@@ -69,6 +69,16 @@
                        FontSize="18"
                        Margin="0,0,0,20" />
 
+                <Button BackgroundColor="#8D2278"
+                        WidthRequest="350"
+                        HeightRequest="75"
+                        FontFamily="PoppinsSemiBold"
+                        FontSize="Medium"
+                        Text="Registrarse"
+                        TextColor="White"
+                        Margin="0,0,0,20" />
+
+
 
 
 
