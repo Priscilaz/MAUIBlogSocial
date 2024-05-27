@@ -11,7 +11,7 @@
             
         </Grid>
         <Grid Grid.Row="1">
-            
+
             <RoundRectangle Margin="-5,-30,-5,-2"
                             CornerRadius="30,30,0,0"
                             Fill="white"/>
@@ -87,24 +87,21 @@
                         TextColor="White"
                         Margin="0,0,0,40" />
 
+                <Label FontFamily="PoppinsMedium"
+                       FontSize="Small"
+                       Text="¿Necesitas Ayuda?"
+                       TextColor="Grey"
+                       HorizontalOptions="CenterAndExpand"
+                       Margin="0,0,0,10" />
 
-
-
-
-
-
-
-
+                <Label FontFamily="PoppinsBold"
+                       FontSize="Header"
+                       Text="Ayuda"
+                       TextColor="DarkSlateGrey"
+                       HorizontalOptions="CenterAndExpand"
+                       TextDecorations="Underline" />
 
             </VerticalStackLayout>
-                
-
-
-
-
         </Grid>
-        
-        
-    
     </Grid>
 </ContentPage>
