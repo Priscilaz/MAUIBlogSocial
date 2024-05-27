@@ -57,6 +57,12 @@
                        FontSize="18"
                        Margin="0,0,0,10" />
 
+                <Entry x:Name="Correo"
+                       Placeholder="Correo Electrónico"
+                       Keyboard="Email"
+                       FontSize="18"
+                       Margin="0,0,0,10" />
+
 
 
 
