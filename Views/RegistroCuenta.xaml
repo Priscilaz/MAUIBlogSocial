@@ -4,22 +4,22 @@
              x:Class="BLOGSOCIALUDLA.Views.RegistroCuenta"
              Title="RegistroCuenta">
 
-    <Grid RowDefinitions=".3*,.7*" Margin="0">
+    <Grid RowDefinitions=".3*,.4*" Margin="0">
         <Image Aspect="AspectFill" Source="https://arquitecturapanamericana.com/wp-content/uploads/2017/03/FOTOGRAFIA-SELECCIONADA-106.jpg"></Image>
         <Grid BackgroundColor="White"
          Opacity=".2"  >
             
         </Grid>
         <Grid Grid.Row="1">
-            
-            <RoundRectangle Margin="-5,-30,-5,-2"
-                            CornerRadius="30,30,0,0"
-                            Fill="white"/>
+
+            <BoxView Color="White"
+                     CornerRadius="30,30,0,0"
+                     Margin="-5,-30,-5,-2" />
             <Image Aspect="AspectFit"
             HeightRequest="70" Margin="5,-500,-5,-2"
             Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png"/>
 
-            <VerticalStackLayout Margin="90,80,90,0" HorizontalOptions="Center">
+            <StackLayout Margin="90,80,90,0" HorizontalOptions="Center">
                 <Label FontAttributes="Bold"
                        WidthRequest="233"
                        HeightRequest="70"
@@ -102,7 +102,7 @@
                        TextDecorations="Underline" />
 
 
-            </VerticalStackLayout>
+            </StackLayout>
               
         </Grid>
 
