@@ -25,7 +25,7 @@
                        HeightRequest="70"
                        FontFamily="PoppinsBold"
                        FontSize="Title"
-                       Text="Bienvenido a SocialUdla!"
+                       Text="¡Bienvenid@ a SocialUdla!"
                        TextColor="Black"
                        HorizontalOptions="Center"
                        HorizontalTextAlignment="Center"
