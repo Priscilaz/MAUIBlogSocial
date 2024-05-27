@@ -6,4 +6,9 @@ public partial class RegistroUsuario : ContentPage
 	{
 		InitializeComponent();
 	}
+
+	private void ClickInicioSesionRegistro(object sender, EventArgs e)
+	{
+		Navigation.PushAsync(new InicioSesion());
+	}
 }

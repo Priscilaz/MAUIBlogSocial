@@ -92,6 +92,7 @@
                         FontSize="15"
                         Text="Iniciar Sesión"
                         TextColor="White"
+                        Clicked="ClickInicioSesionRegistro"
                         Margin="0,0,0,40" />
 
                     <Label FontFamily="PoppinsMedium"
