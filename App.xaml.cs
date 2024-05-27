@@ -19,7 +19,7 @@ namespace BLOGSOCIALUDLA
             //  MainPage = new PaginaPrincipal();
 
             //RegistroCuenta
-            MainPage = new RegistroCuenta();
+            MainPage = new RegistroUsuario();
 
         }
     }
