@@ -18,7 +18,14 @@
             <Image Aspect="AspectFit"
             HeightRequest="70" Margin="5,-500,-5,-2"
             Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png"/>
+
+            <VerticalStackLayout Margin="90,80,90,0" HorizontalOptions="Center">
+
+
+
         </Grid>
+        
+        
     
     </Grid>
 </ContentPage>
