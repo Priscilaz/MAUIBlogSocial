@@ -69,7 +69,7 @@
                        FontSize="18"
                        Margin="0,0,0,20" />
 
-                <Button BackgroundColor="#8D2278"
+                <Button BackgroundColor="#8D2232"
                         WidthRequest="350"
                         HeightRequest="75"
                         FontFamily="PoppinsSemiBold"
