@@ -17,9 +17,7 @@
                             Fill="white"/>
             <Image Aspect="AspectFit"
             HeightRequest="70" Margin="5,-500,-5,-2"
-            Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png"
-
-    />
+            Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png"/>
         </Grid>
     
     </Grid>
