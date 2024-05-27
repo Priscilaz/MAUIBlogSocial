@@ -31,6 +31,16 @@
                        HorizontalTextAlignment="Center"
                        Margin="0,0,0,25" />
 
+                <Label FontFamily="PoppinsMedium"
+                       FontSize="Header"
+                       Text="Para poder ingresar debes Iniciar Sesión"
+                       TextColor="DarkSlateGrey"
+                       HeightRequest="24"
+                       WidthRequest="324"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,0,0,30" />
+
 
 
 
