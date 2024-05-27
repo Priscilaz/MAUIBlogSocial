@@ -3,10 +3,115 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BLOGSOCIALUDLA.Views.RegistroUsuario"
              Title="RegistroUsuario">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <Grid BackgroundColor="White">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+
+
+            </Grid.RowDefinitions>
+
+
+            <Grid Grid.Row="0">
+                <Image Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Start"
+       HeightRequest="70" Margin="0,10,-5,-2"
+       Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png" />
+
+
+                <StackLayout Margin="90,80,90,0" HorizontalOptions="Center">
+                    <Label FontAttributes="Bold"
+                       WidthRequest="233"
+                       HeightRequest="70"
+                       FontFamily="PoppinsBold"
+                       FontSize="Title"
+                       Text="¡Bienvenid@ a SocialUdla!"
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,0,0,10" />
+
+                    <Label FontFamily="PoppinsMedium"
+                       FontSize="Header"
+                     
+                       Text="Para poder ingresar debes Iniciar Sesión"
+                       TextColor="DarkSlateGrey"
+                       HeightRequest="24"
+                       WidthRequest="324"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,0,0,30" />
+
+                    <Entry x:Name="Nombres"
+                       FontFamily="PoppinsMedium"
+                       Placeholder="Nombres"
+                       FontSize="15"
+                       Margin="0,0,0,10" />
+
+                    <Entry x:Name="Apellidos"
+                       FontFamily="PoppinsMedium"
+                       
+                       Placeholder="Apellidos"
+                        FontSize="15"
+                       Margin="0,0,0,10" />
+
+                    <Entry x:Name="NumeroTelefono"
+                       FontFamily="PoppinsMedium"
+                       Placeholder="Número Celular"
+                       Keyboard="Telephone"
+                      FontSize="15"
+                       Margin="0,0,0,10" />
+
+                    <Entry x:Name="Correo"
+                       FontFamily="PoppinsMedium"
+                       Placeholder="Correo Electrónico"
+                       Keyboard="Email"
+                       FontSize="15"
+                       Margin="0,0,0,10" />
+
+                    <Entry x:Name="Contrasena"
+                       FontFamily="PoppinsMedium"
+                       Placeholder="Contraseña"
+                       IsPassword="True"
+                      FontSize="15"
+                       Margin="0,0,0,20" />
+
+                    <Button BackgroundColor="#8D2232"
+                        WidthRequest="350"
+                        HeightRequest="50"
+                        FontFamily="PoppinsSemiBold"
+                        FontSize="15"
+                        Text="Registrarse"
+                        TextColor="White"
+                        Margin="0,0,0,20" />
+
+                    <Button BackgroundColor="#8D2232"
+                        WidthRequest="350"
+                        HeightRequest="50"
+                        FontFamily="PoppinsSemiBold"
+                        FontSize="15"
+                        Text="Iniciar Sesión"
+                        TextColor="White"
+                        Margin="0,0,0,40" />
+
+                    <Label FontFamily="PoppinsMedium"
+                       FontSize="Small"
+                       Text="¿Necesitas Ayuda?"
+                       TextColor="Grey"
+                       HorizontalOptions="CenterAndExpand"
+                       Margin="0,0,0,10" />
+
+                    <Label FontFamily="PoppinsBold"
+                       FontSize="Header"
+                       Text="Ayuda"
+                       TextColor="DarkSlateGrey"
+                       HorizontalOptions="CenterAndExpand"
+                       TextDecorations="Underline" />
+
+                </StackLayout>
+            </Grid>
+
+        </Grid>
+    </ScrollView>
 </ContentPage>
+    
