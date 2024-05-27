@@ -119,13 +119,18 @@
                      Margin="0,0,0,10"
 
                    />
-                <Label FontFamily="PoppinsBold"
-                  FontSize="Header"
-                  Text="Registrate"
-                  TextColor="DarkSlateGrey"
-                  HorizontalOptions="CenterAndExpand" 
-                  TextDecorations="Underline" 
-                 />
+                <Button BackgroundColor="Grey"           
+                 WidthRequest="350"
+                 HeightRequest="40"
+                 FontFamily="PoppinsMedium" 
+                 FontSize="13"
+                 Text="Registrate"
+                 Clicked="ClickRegistroInicio"
+                 TextColor="White"
+                 Margin="0,0,0,40"
+          
+                 >      
+                </Button>
 
             </VerticalStackLayout>
         </Grid>

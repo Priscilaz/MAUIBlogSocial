@@ -107,7 +107,9 @@
                        Text="Ayuda"
                        TextColor="DarkSlateGrey"
                        HorizontalOptions="CenterAndExpand"
-                       TextDecorations="Underline" />
+                       TextDecorations="Underline"
+                           
+                           />
 
                 </StackLayout>
             </Grid>

@@ -12,14 +12,14 @@ namespace BLOGSOCIALUDLA
             navPage.Background = Colors.DarkRed;
             navPage.BarTextColor = Colors.DarkRed;
 
-            MainPage = navPage;
+           MainPage = navPage;
             //MainPage = new InicioSesion();
 
             //Registro Cuenta 
             //  MainPage = new PaginaPrincipal();
 
             //RegistroCuenta
-            MainPage = new RegistroUsuario();
+            //MainPage = new RegistroUsuario();
 
         }
     }

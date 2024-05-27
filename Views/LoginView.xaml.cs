@@ -12,4 +12,9 @@ public partial class LoginView : ContentPage
 		Navigation.PushAsync(new InicioSesion());//uno sobre otra pestaña
        
     }
+
+    private void ClickRegistro(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new RegistroUsuario());
+    }
 }
