@@ -74,7 +74,6 @@
 	  <None Remove="Resources\Images\medicina.jpg" />
 	  <None Remove="Resources\Images\musica.png" />
 	  <None Remove="Resources\Images\nodo.jpg" />
-	  <None Remove="Resources\Images\NODO.png" />
 	  <None Remove="Resources\Images\odontologia.jpg" />
 	  <None Remove="Resources\Images\psicologia.jpg" />
 	</ItemGroup>
@@ -86,6 +85,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\GaleriaServicios.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\InicioSesion.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

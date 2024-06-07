@@ -15,7 +15,13 @@
         
         
         />
-   
+    <ShellContent
+    Title="Galeria"
+    ContentTemplate="{DataTemplate views:GaleriaServicios}"
+    Route="MainPage" 
+    
+    
+    />
 
 
 

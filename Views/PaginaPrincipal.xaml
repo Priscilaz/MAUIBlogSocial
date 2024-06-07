@@ -5,7 +5,7 @@
              Title="Página Principal" BackgroundColor="DarkRed">
 
    
-        <Grid BackgroundColor="White" RowDefinitions=".05*,.1*,.45*,.05*,.05*,.3*">
+        <!--<Grid BackgroundColor="White" RowDefinitions=".05*,.1*,.45*,.05*,.05*,.3*">
           
             <Label FontSize="16"
        HorizontalOptions="Center"
@@ -145,8 +145,8 @@
         </CollectionView>
 
 
-    </Grid>
+    </Grid>-->
 
-  
+    <Label>Holaa</Label>
 
 </ContentPage>
