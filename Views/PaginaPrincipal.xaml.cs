@@ -36,4 +36,10 @@ public partial class PaginaPrincipal : ContentPage
 
         };
     }
+
+    private  void Salir(object sender, EventArgs e)
+    {
+
+        Navigation.PopAsync();
+    }
 }

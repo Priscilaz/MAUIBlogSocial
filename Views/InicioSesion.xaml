@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BLOGSOCIALUDLA.Views.InicioSesion"
              Title="Inicio Sesión"
-             BackgroundColor="DarkRed">
+             BackgroundColor="DarkRed"  
+             >
     <Grid BackgroundColor="white">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

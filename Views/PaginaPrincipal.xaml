@@ -2,9 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BLOGSOCIALUDLA.Views.PaginaPrincipal"
-             Title="Página Principal">
-    <Grid BackgroundColor="White" RowDefinitions=".05*,.1*,.45*,.05*,.05*,.3*">
-        <Label FontSize="16"
+             Title="Página Principal" BackgroundColor="DarkRed">
+
+   
+        <Grid BackgroundColor="White" RowDefinitions=".05*,.1*,.45*,.05*,.05*,.3*">
+          
+            <Label FontSize="16"
        HorizontalOptions="Center"
        FontFamily="PoppinsSemiBold"
        Text="Nuestras Facultades"
@@ -15,6 +18,7 @@
         CornerRadius="25"
         Fill="WhiteSmoke"
         HeightRequest="45"/>
+            
             <SearchBar
                CancelButtonColor="DarkRed"
                Placeholder="Buscar por nombre"
@@ -113,7 +117,7 @@
             <CollectionView Grid.Row="5" ItemsSource="{Binding Facultades2}">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout ItemSpacing="25" Orientation="Horizontal"/>
-
+                    
                  </CollectionView.ItemsLayout>
 
                 <CollectionView.ItemTemplate>
@@ -130,9 +134,9 @@
                                 <Image Aspect="AspectFill" Source="{Binding Image}"/>
 
                             </Border>
+                            
 
-
-                        </Grid>
+                    </Grid>
 
                     </DataTemplate>
 
@@ -142,5 +146,7 @@
 
 
     </Grid>
+
+  
 
 </ContentPage>

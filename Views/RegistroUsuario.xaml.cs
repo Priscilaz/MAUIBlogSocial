@@ -42,8 +42,10 @@ namespace BLOGSOCIALUDLA.Views
         }
 
         private void ClickInicioSesionRegistro(object sender, EventArgs e)
+
         {
-            Application.Current.MainPage = new NavigationPage(new InicioSesion());
+            Navigation.PopAsync();
+//            Application.Current.MainPage = new NavigationPage(new InicioSesion());
         }
     }
 }
