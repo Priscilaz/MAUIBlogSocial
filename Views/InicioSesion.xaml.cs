@@ -1,19 +1,45 @@
-namespace BLOGSOCIALUDLA.Views;
+using Microsoft.Maui.Controls;
+using BLOGSOCIALUDLA.Models;
+using System;
+using System.Linq;
 
-public partial class InicioSesion : ContentPage
+namespace BLOGSOCIALUDLA.Views
 {
-	public InicioSesion()
-	{
-		InitializeComponent();
-	}
-
-    private void ClickIngreso(object sender, EventArgs e)
+    public partial class InicioSesion : ContentPage
     {
-		Navigation.PushAsync(new PaginaPrincipal());
-    }
+        public InicioSesion()
+        {
+            InitializeComponent();
+        }
 
-    private void ClickRegistroInicio(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new RegistroUsuario());
+        private void ClickIngreso(object sender, EventArgs e)
+        {
+            string username = usernameEntry.Text;
+            string password = passwordEntry.Text;
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                errorMessage.Text = "Por favor, ingrese nombre de usuario y contraseña.";
+                errorMessage.IsVisible = true;
+                return;
+            }
+
+            var user = UserData.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
+            if (user != null)
+            {
+                Application.Current.MainPage = new NavigationPage(new PaginaPrincipal());
+            }
+            else
+            {
+                errorMessage.Text = "Nombre de usuario o contraseña incorrectos.";
+                errorMessage.IsVisible = true;
+            }
+        }
+
+        private async void ClickRegistroInicio(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RegistroUsuario());
+
+        }
     }
 }
