@@ -108,16 +108,28 @@
                    TextColor="White"
                    Margin="0,0,0,0"
                    Clicked="ClickPostFica"/>
-                    
 
 
-
-
+                    <!-- Metodo del compa-->
+                    <ListView x:Name="listaComentarios"
+                              RowHeight="80"
+                              ItemSelected="OnClickShowDetails">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Vertical" Padding="10">
+                                        <Label Text="{Binding Contenido}"
+                                               FontSize="15"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </VerticalStackLayout>
-
             </Grid>
-
         </Grid>
     </ScrollView>
 
 </ContentPage>
+
+
