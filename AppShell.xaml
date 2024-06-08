@@ -33,12 +33,13 @@
             <ShellContent ContentTemplate="{DataTemplate views:GaleriaServicios}" />
         </ShellSection>
     </ShellItem>
-
+    
     <ShellItem Route="PaginaPrincipal">
         <ShellSection Title="Página Principal">
             <ShellContent ContentTemplate="{DataTemplate views:PaginaPrincipal}" />
         </ShellSection>
     </ShellItem>
+    
     <ShellItem Route="PostNodo">
         <ShellSection Title="Nodo">
             <ShellContent ContentTemplate="{DataTemplate views:PostNodo}" />

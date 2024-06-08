@@ -7,7 +7,6 @@ public partial class GaleriaServicios : ContentPage
 {
 
     public ObservableCollection<Facultad> Facultades { get; set; }
-    public ObservableCollection<Facultad> Facultades2 { get; set; }
 
 
     public GaleriaServicios()
@@ -30,21 +29,21 @@ public partial class GaleriaServicios : ContentPage
             new Facultad{Name= "NODO", ReadTime= new TimeSpan(0,3,0), Image= "nodo.jpg"},
             new Facultad{Name= "Escuela de Música", ReadTime= new TimeSpan(0,2,0), Image= "musica.jpg"}
         };
-        Facultades2 = new ObservableCollection<Facultad>
-        {
-            new Facultad{Name= "Clínica de Odontología", ReadTime= new TimeSpan(0,30,0), Image= "odontologia.jpg"},
-            new Facultad{Name= "Escuela de Gastronomía", ReadTime= new TimeSpan(0,30,0), Image= "gastronomia.jpg"},
-            new Facultad{Name= "Servicios de Psicología", ReadTime= new TimeSpan(0,30,0), Image= "psicologia.jpg"},
-            new Facultad{Name= "Biblioteca", ReadTime= new TimeSpan(0,30,0), Image= "economia.jpg"},
-
-        };
+        
 
     }
 
-    private void Salir(object sender, EventArgs e)
+    //private void Salir(object sender, EventArgs e)
+    //{
+
+    //    Navigation.PopAsync();
+    //}
+
+    private async void SiguienteClicked(object sender, EventArgs e)
     {
+        await Navigation.PushAsync(new PaginaPrincipal());
 
-        Navigation.PopAsync();
     }
 
+    
 }

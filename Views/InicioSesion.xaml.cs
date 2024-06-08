@@ -28,7 +28,7 @@ namespace BLOGSOCIALUDLA.Views
             var user = UserData.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
             if (user != null)
             {
-                Application.Current.MainPage = new NavigationPage(new PaginaPrincipal());
+                Application.Current.MainPage = new NavigationPage(new GaleriaServicios());
             }
             else
             {
