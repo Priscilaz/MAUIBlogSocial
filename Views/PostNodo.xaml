@@ -13,7 +13,8 @@
             <Grid Grid.Row="0">
 
                 <Button
-                   Clicked="Volver"
+                    Text="Atras"
+                    Clicked="Volver"
                     Margin="25,0,0,1"
                     HorizontalOptions="Start"
                     CornerRadius="250"
@@ -66,70 +67,84 @@
                   />
 
                     </Frame>
-                    <ListView x:Name="listaComentarios"
-                              RowHeight="80"
-                              BackgroundColor="White"
-                              WidthRequest="340"
-                              ItemSelected="OnClickShowDetails"
-                              
-                              >            
-                              
-                        <ListView.ItemTemplate >
-                            <DataTemplate  >
-                                <ViewCell >
-                                    <StackLayout Orientation="Vertical" Padding="10">
-                                        <Label FontFamily="Poppins-Regular" Text="{Binding Contenido}"
-                                                    FontSize="15" Margin="25,0,20,0"/>
-                                    </StackLayout>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                    <Grid Margin="25,0,25,50">
+                        <Border    
+      StrokeShape="RoundRectangle 10,10,10,10"
+      Stroke="#FFBEBE"
+          ></Border>
+                        <StackLayout>
+                            <Label FontAttributes="Bold"
+                 
+               WidthRequest="233"
+               HeightRequest="30"
+               FontFamily="Poppins-SemiBold"
+               FontSize="15"
+               Text="Escribe un comentario"
+               TextColor="DarkRed"
+               HorizontalTextAlignment="Start"
+               Margin="-50,10,0,0"/>
 
-                    <Label FontAttributes="Bold"
-                     WidthRequest="233"
-                     HeightRequest="30"
-                     FontFamily="Poppins-SemiBold"
-                     FontSize="18"
-                     Text="Escribe un comentario"
-                     TextColor="DarkRed"
-                     HorizontalTextAlignment="Start"
-                     Margin="-70,0,0,20"/>
+                            <Grid  Margin="0,0,0,20">
+                                <Border 
+                Grid.RowSpan="3"
+                BackgroundColor="White"
+                HeightRequest="100"
+         
+                StrokeShape="RoundRectangle 10,10,10,10"
+                StrokeThickness="1"
+                WidthRequest="300">
+                                    <Entry 
+                     x:Name="comentarioEntry"
+                     VerticalOptions="StartAndExpand"
+                     HorizontalOptions="Fill"
+                     Margin="25,0,20,50"
+                     TextColor="Black"
+                     Placeholder="Escribe un comentario"
+                     FontSize="13"
+                     FontFamily="PoppinsRegular"/>
 
-                    <Grid Grid.Row="2" Margin="0,0,0,20">
-                        <Border 
-                     Grid.RowSpan="3"
-                     BackgroundColor="White"
-                     HeightRequest="150"
-                     Stroke="DarkRed"
-                     StrokeShape="RoundRectangle 10,10,10,10"
-                     StrokeThickness="1"
-                     WidthRequest="300">
-                            <Entry 
-                              x:Name="comentarioEntry"
-                              VerticalOptions="StartAndExpand"
-                              HorizontalOptions="StartAndExpand"
-                              Margin="25,0,10,0"
-                              TextColor="Black"
-                              Placeholder="Escribe un comentario"
-                              FontSize="13"
-                              FontFamily="PoppinsRegular"/>
-                        </Border>
+                                </Border>
+
+                            </Grid>
+                            <Button BackgroundColor="#8D2232"
+                WidthRequest="200"
+                HeightRequest="40"
+                FontFamily="PoppinsSemiBold"
+                FontSize="12"
+                Text="Añadir Comentario"
+                TextColor="White"
+                Margin="0,0,0,25"
+                Clicked="ClickComentarioNodo"
+                HorizontalOptions="Center"
+                   />
+
+                            <Label Text="Comentarios:"
+              FontSize="15"
+              FontFamily="Poppins-SemiBold"
+              TextColor="DarkRed"
+              Margin="25,0,0,0"
+               >
+
+                            </Label>
+                            <ListView x:Name="listaComentarios"
+                   RowHeight="80"
+                   ItemSelected="OnClickShowDetails">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <StackLayout Orientation="Vertical" Padding="10">
+                                                <Label  Margin="25,0,10,0" FontFamily="Poppins-Regular" Text="{Binding Contenido}"
+                                    FontSize="13"/>
+                                            </StackLayout>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
 
 
+                        </StackLayout>
                     </Grid>
 
-                    <Button BackgroundColor="#8D2232"
-                     WidthRequest="250"
-                     HeightRequest="50"
-                     FontFamily="PoppinsSemiBold"
-                     FontSize="Header"
-                     Text="Añadir Comentario"
-                     TextColor="White"
-                     Margin="0,0,0,20"
-                     Clicked="ClickComentarioNodo"
-                        
-                        />
                     <Button BackgroundColor="#8D2232"
                        WidthRequest="250"
                        HeightRequest="50"

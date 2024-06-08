@@ -67,6 +67,7 @@ namespace BLOGSOCIALUDLA.Views
             DisplayAlert("Comentario añadido", "Tu comentario ha sido añadido exitosamente.", "OK");
 
             comentarioEntry.Text = string.Empty;
+            
         }
 
         private void ClickPostNodo(object sender, EventArgs e)
@@ -75,9 +76,9 @@ namespace BLOGSOCIALUDLA.Views
 
         }
 
-        private void Volver(object sender, EventArgs e)
+        private async void Volver(object sender, EventArgs e)
         {
-            Navigation.PopAsync();
+            await Navigation.PopAsync();
         }
     }
 }
