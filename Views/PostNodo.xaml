@@ -10,13 +10,27 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
 
-            <Grid Grid.Row="0" BackgroundColor="White">
+                <Button
+                   Clicked="Volver"
+                    Margin="25,0,0,1"
+                    HorizontalOptions="Start"
+                    CornerRadius="250"
+                    BackgroundColor="DarkRed"
+
+                    >
+                    
+                   
+                </Button>
+            </Grid>
+
+            <Grid Grid.Row="1" BackgroundColor="White">
                 <VerticalStackLayout Margin="10,20,10,0" HorizontalOptions="Center">
 
                     <Label FontAttributes="Bold"
                    WidthRequest="233"
-                   HeightRequest="40"
+                   HeightRequest="35"
                    FontFamily="PoppinsBold"
                    FontSize="30"
                    Text="NODO"
@@ -82,7 +96,7 @@
                      HorizontalTextAlignment="Start"
                      Margin="-70,0,0,20"/>
 
-                    <Grid Grid.Row="1" Margin="0,0,0,20">
+                    <Grid Grid.Row="2" Margin="0,0,0,20">
                         <Border 
                      Grid.RowSpan="3"
                      BackgroundColor="White"
@@ -126,10 +140,32 @@
                        Margin="0,0,0,28"
                        Clicked="ClickPostNodo"/>
 
-                    <Grid Grid.Row="2">
-                        
-                        
-                    </Grid>
+                    <!--<Grid Grid.Row="2">
+
+                        <VerticalStackLayout Margin="10,20,10,0" HorizontalOptions="Center">
+                            <ListView x:Name="listaComentarios"
+                                  RowHeight="80"
+                                  BackgroundColor="White"
+                                  WidthRequest="340"
+                                  ItemSelected="OnClickShowDetails"
+          
+                                  >     
+
+                                <ListView.ItemTemplate >
+                                    <DataTemplate  >
+                                        <ViewCell >
+                                            <StackLayout Orientation="Vertical" Padding="10">
+                                                <Label FontFamily="Poppins-Regular" Text="{Binding Post}"
+                                FontSize="15" Margin="25,0,20,0"/>
+                                            </StackLayout>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+
+
+                        </VerticalStackLayout>
+                    </Grid>-->
 
 
 
