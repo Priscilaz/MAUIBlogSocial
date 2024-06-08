@@ -213,7 +213,7 @@
             HorizontalOptions="Center"
             VerticalOptions="Center">
             <ImageButton 
-                Source="nodo.jpg" 
+                Source="nodo2.jpg" 
                 Aspect="AspectFill"
                 WidthRequest="185" 
                 HeightRequest="185" 

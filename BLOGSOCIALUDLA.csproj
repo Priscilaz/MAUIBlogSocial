@@ -74,6 +74,7 @@
 	  <None Remove="Resources\Images\medicina.jpg" />
 	  <None Remove="Resources\Images\musica.png" />
 	  <None Remove="Resources\Images\nodo.jpg" />
+	  <None Remove="Resources\Images\nodo2.jpeg" />
 	  <None Remove="Resources\Images\odontologia.jpg" />
 	  <None Remove="Resources\Images\psicologia.jpg" />
 	</ItemGroup>
