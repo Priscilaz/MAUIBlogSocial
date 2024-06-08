@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BLOGSOCIALUDLA.Views.PaginaPrincipal"
-             Title="Página Principal" BackgroundColor="DarkRed">
+             Title="Página Principal" BackgroundColor="White">
 
    
         <!--<Grid BackgroundColor="White" RowDefinitions=".05*,.1*,.45*,.05*,.05*,.3*">
@@ -138,13 +138,15 @@
 
 
     </Grid>-->
-    <VerticalStackLayout>
+    <!--<VerticalStackLayout>
+        <Label>FICA</Label>
         <ImageButton Source="fica.jpg"
              HeightRequest="140"
              x:Name="ficaButton"
              VerticalOptions="Start"
              Clicked="ficaButton_Clicked"
              ></ImageButton>
+        <Label>NODO</Label>
         <ImageButton Source="nodo.jpg"
          HeightRequest="140"
          x:Name="nodoButton"
@@ -152,6 +154,68 @@
          Clicked="nodoButton_Clicked"
          ></ImageButton>
 
+    </VerticalStackLayout>-->
+    <VerticalStackLayout 
+        HorizontalOptions="Center" 
+        VerticalOptions="CenterAndExpand" 
+        Spacing="20" 
+        Padding="30">
+
+        <Label 
+            Text="FICA" 
+            FontSize="24" 
+            FontFamily="Poppins"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" 
+            VerticalOptions="Center" 
+            TextColor="DarkRed" />
+
+        <Frame 
+            CornerRadius="20" 
+            Padding="0" 
+            BackgroundColor="White" 
+            BorderColor="DarkRed"
+            HasShadow="True"
+            WidthRequest="150"
+            HeightRequest="150"
+            HorizontalOptions="Center"
+            VerticalOptions="Start">
+            <ImageButton 
+                Source="fica.jpg" 
+                WidthRequest="140" 
+                HeightRequest="140" 
+                x:Name="ficaButton" 
+                BackgroundColor="Transparent"
+                Clicked="ficaButton_Clicked" />
+        </Frame>
+
+        <Label 
+            Text="NODO" 
+            FontSize="24" 
+            FontFamily="Poppins"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" 
+            VerticalOptions="Center" 
+            TextColor="DarkRed" />
+
+        <Frame 
+            CornerRadius="20" 
+            Padding="0" 
+            BackgroundColor="White" 
+            BorderColor="DarkRed"
+            HasShadow="True"
+            WidthRequest="150"
+            HeightRequest="150"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <ImageButton 
+                Source="nodo.jpg" 
+                WidthRequest="140" 
+                HeightRequest="140" 
+                x:Name="nodoButton" 
+                BackgroundColor="Transparent"
+                Clicked="nodoButton_Clicked" />
+        </Frame>
     </VerticalStackLayout>
     
 </ContentPage>
