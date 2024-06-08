@@ -8,7 +8,8 @@ namespace BLOGSOCIALUDLA
         {
             InitializeComponent();
 
-            var navPage= new NavigationPage(new LoginView());
+            //var navPage= new NavigationPage(new LoginView());
+            var navPage = new NavigationPage(new PostNodo());
             navPage.Background = Colors.DarkRed;
             navPage.BarTextColor = Colors.DarkRed;
 

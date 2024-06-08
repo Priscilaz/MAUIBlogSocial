@@ -107,9 +107,9 @@
                    Text="Añadir Post"
                    TextColor="White"
                    Margin="0,0,0,0"
-                   Clicked="ClickPostFica"
-  
-  />
+                   Clicked="ClickPostFica"/>
+                    
+
 
 
 
