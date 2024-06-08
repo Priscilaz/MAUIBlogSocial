@@ -2,6 +2,7 @@ using Microsoft.Maui.Controls;
 using BLOGSOCIALUDLA.Models;
 using System;
 using System.Linq;
+using BLOGSOCIALUDLA.Models.BLOGSOCIALUDLA.Models;
 
 namespace BLOGSOCIALUDLA.Views
 {
