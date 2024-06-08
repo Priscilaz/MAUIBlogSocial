@@ -167,7 +167,7 @@
             FontFamily="Poppins"
             FontAttributes="Bold"
             HorizontalOptions="Center" 
-            VerticalOptions="Center" 
+            VerticalOptions="Start" 
             TextColor="DarkRed" />
 
         <Frame 
@@ -176,18 +176,22 @@
             BackgroundColor="White" 
             BorderColor="DarkRed"
             HasShadow="True"
-            WidthRequest="150"
-            HeightRequest="150"
+            WidthRequest="190"
+            HeightRequest="190"
             HorizontalOptions="Center"
             VerticalOptions="Start">
             <ImageButton 
                 Source="fica.jpg" 
-                WidthRequest="140" 
-                HeightRequest="140" 
+                WidthRequest="185" 
+                HeightRequest="185" 
+                CornerRadius="20" 
+                Aspect="AspectFill"
                 x:Name="ficaButton" 
                 BackgroundColor="Transparent"
                 Clicked="ficaButton_Clicked" />
         </Frame>
+
+        
 
         <Label 
             Text="NODO" 
@@ -204,14 +208,16 @@
             BackgroundColor="White" 
             BorderColor="DarkRed"
             HasShadow="True"
-            WidthRequest="150"
-            HeightRequest="150"
+            WidthRequest="190"
+            HeightRequest="190"
             HorizontalOptions="Center"
             VerticalOptions="Center">
             <ImageButton 
                 Source="nodo.jpg" 
-                WidthRequest="140" 
-                HeightRequest="140" 
+                Aspect="AspectFill"
+                WidthRequest="185" 
+                HeightRequest="185" 
+                CornerRadius="20" 
                 x:Name="nodoButton" 
                 BackgroundColor="Transparent"
                 Clicked="nodoButton_Clicked" />
