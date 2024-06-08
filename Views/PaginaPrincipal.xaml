@@ -146,7 +146,25 @@
 
 
     </Grid>-->
+    <Grid BackgroundColor="White">
+        <VerticalStackLayout>
+            <Label FontAttributes="Bold"
+                 BackgroundColor="White"
+                WidthRequest="233"
+                HeightRequest="70"
+                FontFamily="PoppinsBold"
+                FontSize="Title"
+                Text="Bienvenido a SocialUdla!"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                 Margin="0,0,0,25"
+ ></Label>
+            <Button NavigationPage.IconColor="White"></Button>
 
-    <Label>Holaa</Label>
+        </VerticalStackLayout>
 
+
+       
+    </Grid>
 </ContentPage>

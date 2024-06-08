@@ -13,5 +13,7 @@ namespace BLOGSOCIALUDLA.Models
         public TimeSpan ReadTime { get; set; }
 
         public string Image { get; set; }
+        public string Mision { get; set; }
+        public string Vision { get; set; }
     }
 }
