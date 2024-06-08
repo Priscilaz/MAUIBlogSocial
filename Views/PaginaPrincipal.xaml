@@ -146,25 +146,20 @@
 
 
     </Grid>-->
-    <Grid BackgroundColor="White">
-        <VerticalStackLayout>
-            <Label FontAttributes="Bold"
-                 BackgroundColor="White"
-                WidthRequest="233"
-                HeightRequest="70"
-                FontFamily="PoppinsBold"
-                FontSize="Title"
-                Text="Bienvenido a SocialUdla!"
-                TextColor="Black"
-                HorizontalOptions="Center"
-                    HorizontalTextAlignment="Center"
-                 Margin="0,0,0,25"
- ></Label>
-            <Button NavigationPage.IconColor="White"></Button>
+    <VerticalStackLayout>
+        <ImageButton Source="fica.jpg"
+             HeightRequest="140"
+             x:Name="ficaButton"
+             VerticalOptions="Start"
+             Clicked="ficaButton_Clicked"
+             ></ImageButton>
+        <ImageButton Source="nodo.jpg"
+         HeightRequest="140"
+         x:Name="nodoButton"
+         VerticalOptions="Center"
+         Clicked="nodoButton_Clicked"
+         ></ImageButton>
 
-        </VerticalStackLayout>
-
-
-       
-    </Grid>
+    </VerticalStackLayout>
+    
 </ContentPage>

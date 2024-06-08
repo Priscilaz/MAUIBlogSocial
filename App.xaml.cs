@@ -13,7 +13,8 @@ namespace BLOGSOCIALUDLA
             navPage.Background = Colors.DarkRed;
             navPage.BarTextColor = Colors.DarkRed;
 
-           MainPage = navPage;
+            //MainPage = navPage;
+            MainPage = new AppShell();
             //MainPage = new InicioSesion();
 
             //Registro Cuenta 

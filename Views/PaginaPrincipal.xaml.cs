@@ -17,6 +17,17 @@ public partial class PaginaPrincipal : ContentPage
         BindingContext = this;
     }
 
+    private async void ficaButton_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new PostFica());
+        //await Shell.Current.GoToAsync("PostFica");
+    }
+
+    private async void nodoButton_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new PostNodo());
+    }
+
     //private void InitializeFacultades()
     //{
     //    Facultades = new ObservableCollection<Facultad>
