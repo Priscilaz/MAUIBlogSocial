@@ -3,7 +3,8 @@ using System;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using BLOGSOCIALUDLA.Models;
-using Windows.Services.Maps;
+//using System.Windows.Services.Maps;
+
 
 namespace BLOGSOCIALUDLA.Views
 {
