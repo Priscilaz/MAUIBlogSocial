@@ -1,17 +1,20 @@
 namespace BLOGSOCIALUDLA.Views;
 using BLOGSOCIALUDLA.Models;
+ 
 using System.Collections.ObjectModel;
 
 public partial class PostFica : ContentPage
 {
-    private ObservableCollection<Comentario> comentarios;
-
+    private ObservableCollection<Comentario> comentariosFica;
+  
     public PostFica()
     {
         InitializeComponent();
-        comentarios = new ObservableCollection<Comentario>();
+        comentariosFica = new ObservableCollection<Comentario>();
      
-        listaComentarios.ItemsSource = comentarios;
+        listaComentarios.ItemsSource = comentariosFica;
+      
+    
     }
 
     protected override async void OnAppearing()
@@ -22,10 +25,12 @@ public partial class PostFica : ContentPage
 
     private async Task LoadComentarios()
     {
-        List<Comentario> ListaComentarios = await DataComentario.GetComentarios();
+
+        List<Comentario> ListaComentarios = await DataComentario.GetComentarioFica();
         foreach (var comentario in ListaComentarios)
         {
-            comentarios.Add(comentario);
+            comentariosFica.Add(comentario);
+            Console.WriteLine(comentario);
         }
     }
 
@@ -56,11 +61,14 @@ public partial class PostFica : ContentPage
             Contenido = comentarioTexto
         };
 
-        comentarios.Add(nuevoComentario);
-
+        comentariosFica.Add(nuevoComentario);
+        
         DisplayAlert("Comentario añadido", "Tu comentario ha sido añadido exitosamente.", "OK");
 
         comentarioEntry.Text = string.Empty;
+
+        Console.WriteLine(comentariosFica);
+
     }
 
     private void ClickPostFica(object sender, EventArgs e)
