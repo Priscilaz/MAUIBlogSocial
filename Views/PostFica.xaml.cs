@@ -6,4 +6,14 @@ public partial class PostFica : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void ClickPostFica(object sender, EventArgs e)
+    {
+
+    }
+
+    private void ClickComentarioFica(object sender, EventArgs e)
+    {
+
+    }
 }

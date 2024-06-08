@@ -6,4 +6,14 @@ public partial class PostNodo : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void ClickComentarioNodo(object sender, EventArgs e)
+    {
+
+    }
+
+    private void ClickPostNodo(object sender, EventArgs e)
+    {
+
+    }
 }

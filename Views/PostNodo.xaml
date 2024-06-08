@@ -3,30 +3,123 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BLOGSOCIALUDLA.Views.PostNodo"
              Title="PostNodo">
-    <Grid BackgroundColor="white">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0" BackgroundColor="White">
-            <VerticalStackLayout Margin="0,50,90,0" HorizontalOptions="Center">
-                <Image Aspect="AspectFit"
-                   HeightRequest="55"
-                   Margin="-19,-30,150,10"
-                   Source="nodo.jpg"/>
-                <Label FontAttributes="Bold"
+    <ScrollView>
+        <Grid BackgroundColor="white">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" BackgroundColor="White">
+                <VerticalStackLayout Margin="10,20,10,0" HorizontalOptions="Center">
+
+                    <Label FontAttributes="Bold"
                    WidthRequest="233"
-                   HeightRequest="30"
+                   HeightRequest="40"
                    FontFamily="PoppinsBold"
-                   FontSize="Title"
+                   FontSize="30"
                    Text="NODO"
-                   TextColor="Black"
-                   HorizontalTextAlignment="Start"
-                   Margin="0,0,0,3"/>
+                   HorizontalOptions="StartAndExpand"
+                   TextColor="DarkRed"
+                   Margin="35,0,0,20"/>
+
+
+                    <Label TextColor="#636363"
+                       FontFamily="Poppins-Medium" 
+                       Margin="35,0,25,20" 
+                       FontSize="13.5"
+                       Text="En NODO, agrupamos todas las carreras que abrazan un enfoque creativo en su proyección profesional."/>
+
+                    <Label FontAttributes="Bold"
+                    WidthRequest="233"
+                    HeightRequest="25"
+                    FontFamily="Poppins-SemiBold"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    Text="Una experiencia UNICA"
+                    TextColor="DarkRed"
+                    HorizontalTextAlignment="Start"
+                    Margin="0,0,0,15"/>
+
+                    <Frame Background="White" HeightRequest="190" WidthRequest="290" Margin="0,0,0,25"  >
+                        <Label 
+                      TextColor="#636363"
+                      FontSize="13.5"
+                      HorizontalTextAlignment="Center"
+                      Margin="0,5,0,0" FontFamily="Poppins-Medium" 
+                      Text="En NODO, la innovación, la tecnología, la creatividad, el arte y la cultura convergen en un ambiente flexible y práctico. Aquí, formamos  Profesionales integrales y  críticos que desafían e impulsan el status quo."
+                  />
+
+                    </Frame>
+
+
+                    <Label FontAttributes="Bold"
+                     WidthRequest="233"
+                     HeightRequest="30"
+                     FontFamily="Poppins-SemiBold"
+                     FontSize="18"
+                     Text="Escribe un comentario"
+                     TextColor="DarkRed"
+                     HorizontalTextAlignment="Start"
+                     Margin="-70,0,0,0"/>
+
+                    <Grid Grid.Row="1" Margin="0,0,0,20">
+                        <Border 
+                     Grid.RowSpan="3"
+                     BackgroundColor="White"
+                     HeightRequest="150"
+                     Stroke="DarkRed"
+                     StrokeShape="RoundRectangle 10,10,10,10"
+                     StrokeThickness="1"
+                     WidthRequest="300">
+                            <Entry 
+                              x:Name="comentarioEntry"
+                              VerticalOptions="StartAndExpand"
+                              HorizontalOptions="StartAndExpand"
+                              Margin="25,0,10,0"
+                              TextColor="Black"
+                              Placeholder="Escribe un comentario"
+                              FontSize="13"
+                              FontFamily="PoppinsRegular"/>
+                        </Border>
+
+
+                    </Grid>
+
+                    <Button BackgroundColor="#8D2232"
+                     WidthRequest="250"
+                     HeightRequest="50"
+                     FontFamily="PoppinsSemiBold"
+                     FontSize="Header"
+                     Text="Añadir Comentario"
+                     TextColor="White"
+                     Margin="0,0,0,20"
+                     Clicked="ClickComentarioNodo"
+                        
+                        />
+                    <Button BackgroundColor="#8D2232"
+                       WidthRequest="250"
+                       HeightRequest="50"
+                       FontFamily="PoppinsSemiBold"
+                       FontSize="Header"
+                       Text="Añadir Post"
+                       TextColor="White"
+                       Margin="0,0,0,0"
+                       Clicked="ClickPostNodo"
+      
+      />
+
+
+
+
+
 
                 </VerticalStackLayout>
 
-       </Grid>
-    </Grid>
+            </Grid>
+
+        </Grid>
+    </ScrollView>
+
 </ContentPage>
