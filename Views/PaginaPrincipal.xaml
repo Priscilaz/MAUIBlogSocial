@@ -7,73 +7,65 @@
    
         <!--<Grid BackgroundColor="White" RowDefinitions=".05*,.1*,.45*,.05*,.05*,.3*">
           
-            <Label FontSize="16"
+         <Label FontSize="16"
        HorizontalOptions="Center"
        FontFamily="PoppinsSemiBold"
        Text="Nuestras Facultades"
-       TextColor="DarkRed"
-       VerticalOptions="Center" />
-        <Grid Grid.Row="1" Margin="25,10,25,10">
-            <RoundRectangle
-        CornerRadius="25"
-        Fill="WhiteSmoke"
-        HeightRequest="45"/>
-            
-            <SearchBar
-               CancelButtonColor="DarkRed"
-               Placeholder="Buscar por nombre"
-               PlaceholderColor="Black"
-               TextColor="Black"
-               VerticalOptions="Center"/>
-        </Grid>
-            <CarouselView  Grid.Row="2" IndicatorView="indicatorView" ItemsSource="{Binding Facultades}"
-                       PeekAreaInsets="30">
-            <CarouselView.ItemsLayout>
-                <LinearItemsLayout
-                    ItemSpacing="0"
-                    Orientation="Horizontal"
-                    SnapPointsAlignment="Center"
+      TextColor="DarkRed"
+      VerticalOptions="Center" />
+       <Grid Grid.Row="1" Margin="25,10,25,10">
+           <RoundRectangle
+       CornerRadius="25"
+       Fill="WhiteSmoke"
+       HeightRequest="45"/>
+              <SearchBar
+              CancelButtonColor="DarkRed"
+              Placeholder="Buscar por nombre"
+              PlaceholderColor="Black"
+              TextColor="Black"
+              VerticalOptions="Center"/>
+       </Grid>
+           <CarouselView  Grid.Row="2" IndicatorView="indicatorView" ItemsSource="{Binding Facultades}"
+                     PeekAreaInsets="30">
+          <CarouselView.ItemsLayout>
+               <LinearItemsLayout
+                   ItemSpacing="0"
+                   Orientation="Horizontal"
+                   SnapPointsAlignment="Center"
                     SnapPointsType="MandatorySingle"/>
-
-
-            </CarouselView.ItemsLayout>
-
-            <CarouselView.ItemTemplate>
-                <DataTemplate>
-                    <Grid >
-                        <Border 
-                            Grid.RowSpan="3"
-                            BackgroundColor="WhiteSmoke"
-                            HeightRequest="300"
-                            Stroke="DarkRed"
-                            StrokeShape="RoundRectangle 30,30,30,30"
-                            StrokeThickness="3"
-                            WidthRequest="300">
-                            <Grid RowDefinitions=".2*,.6*,.2*">
-
+           </CarouselView.ItemsLayout> 
+           <CarouselView.ItemTemplate>
+              <DataTemplate>
+                   <Grid >
+                      <Border 
+                           Grid.RowSpan="3"
+                           BackgroundColor="WhiteSmoke"
+                           HeightRequest="300"
+                           Stroke="DarkRed"
+                           StrokeShape="RoundRectangle 30,30,30,30"
+                           StrokeThickness="3"
+                           WidthRequest="300">
+                           <Grid RowDefinitions=".2*,.6*,.2*">
                                 <Image Grid.RowSpan="3" Aspect="AspectFill" Source="{Binding Image}"
-                                   />
-                                <RoundRectangle
-                                    Grid.RowSpan="3"
-                                    CornerRadius="30"
-                                    HeightRequest="300"
-                                    WidthRequest="300"
-                                    Opacity=".7">
-                                        <RoundRectangle.Fill>
-                                            <LinearGradientBrush EndPoint="0,1">
-                                                <GradientStop Offset="0" Color="Transparent"/>
-                                                <GradientStop Offset="1" Color="#030005"/>
-                                            </LinearGradientBrush>
-                                        </RoundRectangle.Fill>
-
-                                </RoundRectangle>
-
-
-                                <VerticalStackLayout Grid.Row="2" Margin="20,0,0,0">
+                                  />
+                               <RoundRectangle
+                                   Grid.RowSpan="3"
+                                   CornerRadius="30"
+                                   HeightRequest="300"
+                                   WidthRequest="300"
+                                   Opacity=".7">
+                                       <RoundRectangle.Fill>
+                                           <LinearGradientBrush EndPoint="0,1">
+                                               <GradientStop Offset="0" Color="Transparent"/>
+                                               <GradientStop Offset="1" Color="#030005"/>
+                                           </LinearGradientBrush>
+                                       </RoundRectangle.Fill>
+                                </RoundRectangle
+                               <VerticalStackLayout Grid.Row="2" Margin="20,0,0,0">
                                     
-                                    <Label FontSize="Medium"
-                                           FontFamily="PoppinsSemiBold"
-                                           Text="{Binding Name}"
+                                  <Label FontSize="Medium"
+                                         FontFamily="PoppinsSemiBold"
+                                    Text="{Binding Name}"
                                            TextColor="White"/>
                                     <Label Text="{Binding ReadTime, StringFormat='Tiempo de Lectura: {0:%m} mins'}"
                                            FontFamily="PoppinsSemiBold"

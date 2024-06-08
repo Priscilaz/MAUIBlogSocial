@@ -74,5 +74,10 @@ namespace BLOGSOCIALUDLA.Views
             DisplayAlert("Post añadido", "Tu post ha sido añadido exitosamente.", "OK");
 
         }
+
+        private void Volver(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
     }
 }
