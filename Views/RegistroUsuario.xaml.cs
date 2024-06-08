@@ -1,7 +1,7 @@
 using Microsoft.Maui.Controls;
 using BLOGSOCIALUDLA.Models;
 using System;
-using System.Linq;
+using BLOGSOCIALUDLA.Models.BLOGSOCIALUDLA.Models;
 
 namespace BLOGSOCIALUDLA.Views
 {
@@ -24,7 +24,7 @@ namespace BLOGSOCIALUDLA.Views
                 string.IsNullOrEmpty(numeroTelefono) || string.IsNullOrEmpty(correo) ||
                 string.IsNullOrEmpty(contrasena))
             {
-                errorMessage.Text = "Por favor, complete todos los campos.";
+                errorMessage.Text = "Por favor, completa todos los campos.";
                 errorMessage.IsVisible = true;
                 return;
             }
@@ -32,7 +32,10 @@ namespace BLOGSOCIALUDLA.Views
             var newUser = new User
             {
                 Username = correo,
-                Password = contrasena
+                Password = contrasena,
+                Nombres = nombres,
+                Apellidos = apellidos,
+                NumeroTelefono = numeroTelefono
             };
 
             UserData.Users.Add(newUser);
@@ -42,10 +45,8 @@ namespace BLOGSOCIALUDLA.Views
         }
 
         private void ClickInicioSesionRegistro(object sender, EventArgs e)
-
         {
             Navigation.PopAsync();
-//            Application.Current.MainPage = new NavigationPage(new InicioSesion());
         }
     }
 }
