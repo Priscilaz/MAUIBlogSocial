@@ -3,10 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BLOGSOCIALUDLA.Views.PostNodo"
              Title="PostNodo">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid BackgroundColor="white">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" BackgroundColor="White">
+            <VerticalStackLayout Margin="0,50,90,0" HorizontalOptions="Center">
+                <Image Aspect="AspectFit"
+                   HeightRequest="55"
+                   Margin="-19,-30,150,10"
+                   Source="nodo.jpg"/>
+                <Label FontAttributes="Bold"
+                   WidthRequest="233"
+                   HeightRequest="30"
+                   FontFamily="PoppinsBold"
+                   FontSize="Title"
+                   Text="NODO"
+                   TextColor="Black"
+                   HorizontalTextAlignment="Start"
+                   Margin="0,0,0,3"/>
+
+                </VerticalStackLayout>
+
+       </Grid>
+    </Grid>
 </ContentPage>
