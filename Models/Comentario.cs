@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BLOGSOCIALUDLA.Models
 {
-    internal class Comentario
+    public class Comentario
     {
+        public string Contenido { get; set; }
     }
 }

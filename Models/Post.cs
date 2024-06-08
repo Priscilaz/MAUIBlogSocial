@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BLOGSOCIALUDLA.Models;
+
 
 namespace BLOGSOCIALUDLA.Models
 {
-    internal class Post
+    public class Post
     {
+        public string Titulo { get; set; }
+        public string Contenido { get; set; }
     }
 }
