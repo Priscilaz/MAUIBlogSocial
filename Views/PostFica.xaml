@@ -76,7 +76,7 @@
                             ItemDisplayBinding="{Binding Titulo}"
                             SelectedIndexChanged="PostPicker_SelectedIndexChanged" />
 
-                    
+
                     <Button BackgroundColor="#8D2232"
                             WidthRequest="250"
                             HeightRequest="50"

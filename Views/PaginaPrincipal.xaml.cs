@@ -47,9 +47,5 @@ public partial class PaginaPrincipal : ContentPage
         Navigation.PopAsync();
     }
 
-    private async void irUsuario(object sender, EventArgs e)
-    {
-       
-        //await Navigation.PushAsync(new UsuarioView());
-    }
+     
 }

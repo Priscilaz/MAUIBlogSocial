@@ -15,6 +15,7 @@ namespace BLOGSOCIALUDLA.Views
 
         public PostNodo()
         {
+          
             InitializeComponent();
             Posts = new ObservableCollection<Post>(DataPost.Posts);
             BindingContext = this;
@@ -29,7 +30,7 @@ namespace BLOGSOCIALUDLA.Views
             }
         }
 
-        private async void ClickPostFica(object sender, EventArgs e)
+        private async void ClickPostNodo(object sender, EventArgs e)
         {
             var nuevaPage = new AddPostPage();
             nuevaPage.PostAgregado += NuevaPage_PostAgregado;
@@ -41,6 +42,13 @@ namespace BLOGSOCIALUDLA.Views
             DataPost.AgregarPost(e);
             Posts.Add(e);
         }
+
+        private async void Volver(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+
+       
     }
 }
     
