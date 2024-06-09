@@ -12,6 +12,8 @@ namespace BLOGSOCIALUDLA.Models
 {
     public static class DataPost
     {
+
+
         private static List<Post> _posts = new List<Post>
         {
             new Post
