@@ -9,5 +9,6 @@ namespace BLOGSOCIALUDLA.Models
     public class Comentario
     {
         public string Contenido { get; set; }
+        public DateTime Fecha { get; set; }
     }
 }

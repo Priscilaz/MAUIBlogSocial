@@ -3,8 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BLOGSOCIALUDLA.Views.PostSeleccionado"
              Title="Detalles del Post">
-    <VerticalStackLayout>
-        <Label x:Name="tituloLabel" FontSize="24" FontAttributes="Bold" Margin="10" />
-        <Label x:Name="contenidoLabel" FontSize="16" Margin="10" />
+    <VerticalStackLayout Padding="10">
+        <Label x:Name="tituloLabel" FontSize="24" FontAttributes="Bold" Margin="10,0" />
+        <Label x:Name="contenidoLabel" FontSize="16" Margin="10,0" />
+
+        <Label Text="Comentarios" FontSize="20" FontAttributes="Bold" Margin="10,10,0,0"/>
+        <CollectionView x:Name="comentariosCollectionView" ItemsSource="{Binding Comentarios}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="5" Margin="5,0">
+                        <Label Text="{Binding Contenido}" FontSize="14" />
+                        <Label Text="{Binding Fecha}" FontSize="12" TextColor="Gray" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <StackLayout Orientation="Horizontal" Margin="10,10,0,0">
+            <Entry x:Name="nuevoComentarioEntry" Placeholder="Añadir un comentario..." HorizontalOptions="FillAndExpand" />
+            <Button Text="Enviar" Clicked="EnviarComentario_Clicked" />
+        </StackLayout>
     </VerticalStackLayout>
 </ContentPage>

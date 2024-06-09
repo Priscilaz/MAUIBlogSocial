@@ -18,9 +18,14 @@ namespace BLOGSOCIALUDLA.Models
             new Post
             {
                 Titulo = "Primer Post Prueba",
-                Contenido = "Hola ¿Cómo están bros?."
+                Contenido = "Hola ¿Cómo están?",
+                Comentarios = new List<Comentario>
+                {
+                    new Comentario { Contenido = "Primer comentario", Fecha = DateTime.Now }
+                }
             }
         };
     }
 }
+
 

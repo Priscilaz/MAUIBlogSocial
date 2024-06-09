@@ -18,15 +18,15 @@ public static class DataComentario
         };
         return Task.FromResult(comentarios);
     }
-    public static Task<List<Comentario>> GetComentarioFica()
-    {
+    //public static Task<List<Comentario>> GetComentarioFica()
+    //{
 
-        var comentariosFica = new List<Comentario>
-        {
-            new Comentario { Contenido = "¡FICA me cambio la vida, la mejor facultad de Inges! :)." },
-            new Comentario { Contenido = "Alguien sabe como contacto a mi mentor?" },
-        };
-        return Task.FromResult(comentariosFica);
-    }
+    //    var comentariosFica = new List<Comentario>
+    //    {
+    //        new Comentario { Contenido = "¡FICA me cambio la vida, la mejor facultad de Inges! :)." },
+    //        new Comentario { Contenido = "Alguien sabe como contacto a mi mentor?" },
+    //    };
+    //    return Task.FromResult(comentariosFica);
+    //}
 
 }
