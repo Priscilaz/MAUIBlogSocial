@@ -4,12 +4,12 @@
              x:Class="BLOGSOCIALUDLA.Views.PostFica"
              Title="PostFica">
     <ScrollView>
-        <Grid BackgroundColor="white">
+        <Grid BackgroundColor="White">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0" BackgroundColor="White">
@@ -22,39 +22,14 @@
                            Text="FICA"
                            HorizontalOptions="StartAndExpand"
                            TextColor="DarkRed"
-                           Margin="35,0,0,20"/>
-                    <ListView x:Name="listaPosts"
-                              ItemSelected="OnPostSelected">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <StackLayout Orientation="Vertical" Padding="10">
-                                        <Label Margin="25,0,10,0" FontFamily="Poppins-Regular" Text="{Binding Titulo}"
-                                               FontSize="18" FontAttributes="Bold"/>
-                                        <Label Margin="25,0,10,0" FontFamily="Poppins-Regular" Text="{Binding Contenido}"
-                                               FontSize="14"/>
-                                        <ListView x:Name="listaComentarios"
-                                                  ItemsSource="{Binding Comentarios}">
-                                            <ListView.ItemTemplate>
-                                                <DataTemplate>
-                                                    <ViewCell>
-                                                        <Label Margin="25,0,10,0" FontFamily="Poppins-Regular" Text="{Binding Contenido}"
-                                                               FontSize="12"/>
-                                                    </ViewCell>
-                                                </DataTemplate>
-                                            </ListView.ItemTemplate>
-                                        </ListView>
-                                        <Entry x:Name="comentarioEntry"
-                                               Placeholder="Escribe tu comentario"
-                                               FontFamily="PoppinsRegular"
-                                               FontSize="15"
-                                               Margin="25,0,10,0"/>
-                                        <Button Text="Añadir Comentario" Clicked="OnAddComment" CommandParameter="{Binding .}"/>
-                                    </StackLayout>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                           Margin="35,0,0,20" />
+
+                    <Picker x:Name="postPicker"
+                            Title="Selecciona un post"
+                            ItemsSource="{Binding Posts}"
+                            ItemDisplayBinding="{Binding Titulo}"
+                            SelectedIndexChanged="PostPicker_SelectedIndexChanged" />
+
                     <Button BackgroundColor="#8D2232"
                             WidthRequest="250"
                             HeightRequest="50"
@@ -62,8 +37,8 @@
                             FontSize="Header"
                             Text="Añadir Post"
                             TextColor="White"
-                            Margin="0,0,0,80"
-                            Clicked="ClickPostFica"/>
+                            Margin="0,20,0,80"
+                            Clicked="ClickPostFica" />
                 </VerticalStackLayout>
             </Grid>
         </Grid>

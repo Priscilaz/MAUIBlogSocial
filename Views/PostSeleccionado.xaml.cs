@@ -1,9 +1,15 @@
-namespace BLOGSOCIALUDLA.Views;
+using BLOGSOCIALUDLA.Models;
 
-public partial class PostSeleccionado : ContentPage
+namespace BLOGSOCIALUDLA.Views
 {
-	public PostSeleccionado()
-	{
-		InitializeComponent();
-	}
+    public partial class PostSeleccionado : ContentPage
+    {
+        public PostSeleccionado(Post post)
+        {
+            InitializeComponent();
+
+            tituloLabel.Text = post.Titulo;
+            contenidoLabel.Text = post.Contenido;
+        }
+    }
 }
