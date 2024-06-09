@@ -1,6 +1,7 @@
 using BLOGSOCIALUDLA.Models;
 using BLOGSOCIALUDLA.Models.BLOGSOCIALUDLA.Models;
 using Microsoft.Maui.Controls;
+using System;
 using System.Linq;
 
 namespace BLOGSOCIALUDLA.Views
@@ -8,12 +9,7 @@ namespace BLOGSOCIALUDLA.Views
     public partial class UsuarioView : ContentPage
     {
         private User _currentUser;
-        //public UsuarioView()
-        //{
-        //    InitializeComponent();
 
-          
-        //}
         public UsuarioView(string username)
         {
             InitializeComponent();
