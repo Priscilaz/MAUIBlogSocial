@@ -12,7 +12,7 @@ namespace BLOGSOCIALUDLA.Models
     {
         public string Titulo { get; set; }
         public string Contenido { get; set; }
-        public List<Comentario> Comentarios { get; set; } = new List<Comentario>();
+        public  List<Comentario> Comentarios { get; set; } = new List<Comentario>();
 
     }
 }

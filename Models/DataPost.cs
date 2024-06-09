@@ -4,16 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Collections.Generic;
 using System.Collections.Generic;
 
-using System.Collections.Generic;
 
 namespace BLOGSOCIALUDLA.Models
 {
     public static class DataPost
     {
-        public static List<Post> Posts = new List<Post>
+        private static List<Post> _posts = new List<Post>
         {
             new Post
             {
@@ -25,7 +24,15 @@ namespace BLOGSOCIALUDLA.Models
                 }
             }
         };
+
+        public static List<Post> Posts
+        {
+            get { return _posts; }
+        }
+
+        public static void AgregarPost(Post nuevoPost)
+        {
+            _posts.Add(nuevoPost);
+        }
     }
 }
-
-

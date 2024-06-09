@@ -33,6 +33,7 @@ namespace BLOGSOCIALUDLA.Views
 
         private void NuevaPage_PostAgregado(object sender, Post e)
         {
+            DataPost.AgregarPost(e);
             Posts.Add(e);
         }
     }
