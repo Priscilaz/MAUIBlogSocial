@@ -4,173 +4,36 @@
              x:Class="BLOGSOCIALUDLA.Views.PaginaPrincipal"
              Title="Página Principal" BackgroundColor="White">
 
-   
-        <!--<Grid BackgroundColor="White" RowDefinitions=".05*,.1*,.45*,.05*,.05*,.3*">
-          
-         <Label FontSize="16"
-       HorizontalOptions="Center"
-       FontFamily="PoppinsSemiBold"
-       Text="Nuestras Facultades"
-      TextColor="DarkRed"
-      VerticalOptions="Center" />
-       <Grid Grid.Row="1" Margin="25,10,25,10">
-           <RoundRectangle
-       CornerRadius="25"
-       Fill="WhiteSmoke"
-       HeightRequest="45"/>
-              <SearchBar
-              CancelButtonColor="DarkRed"
-              Placeholder="Buscar por nombre"
-              PlaceholderColor="Black"
-              TextColor="Black"
-              VerticalOptions="Center"/>
-       </Grid>
-           <CarouselView  Grid.Row="2" IndicatorView="indicatorView" ItemsSource="{Binding Facultades}"
-                     PeekAreaInsets="30">
-          <CarouselView.ItemsLayout>
-               <LinearItemsLayout
-                   ItemSpacing="0"
-                   Orientation="Horizontal"
-                   SnapPointsAlignment="Center"
-                    SnapPointsType="MandatorySingle"/>
-           </CarouselView.ItemsLayout> 
-           <CarouselView.ItemTemplate>
-              <DataTemplate>
-                   <Grid >
-                      <Border 
-                           Grid.RowSpan="3"
-                           BackgroundColor="WhiteSmoke"
-                           HeightRequest="300"
-                           Stroke="DarkRed"
-                           StrokeShape="RoundRectangle 30,30,30,30"
-                           StrokeThickness="3"
-                           WidthRequest="300">
-                           <Grid RowDefinitions=".2*,.6*,.2*">
-                                <Image Grid.RowSpan="3" Aspect="AspectFill" Source="{Binding Image}"
-                                  />
-                               <RoundRectangle
-                                   Grid.RowSpan="3"
-                                   CornerRadius="30"
-                                   HeightRequest="300"
-                                   WidthRequest="300"
-                                   Opacity=".7">
-                                       <RoundRectangle.Fill>
-                                           <LinearGradientBrush EndPoint="0,1">
-                                               <GradientStop Offset="0" Color="Transparent"/>
-                                               <GradientStop Offset="1" Color="#030005"/>
-                                           </LinearGradientBrush>
-                                       </RoundRectangle.Fill>
-                                </RoundRectangle
-                               <VerticalStackLayout Grid.Row="2" Margin="20,0,0,0">
-                                    
-                                  <Label FontSize="Medium"
-                                         FontFamily="PoppinsSemiBold"
-                                    Text="{Binding Name}"
-                                           TextColor="White"/>
-                                    <Label Text="{Binding ReadTime, StringFormat='Tiempo de Lectura: {0:%m} mins'}"
-                                           FontFamily="PoppinsSemiBold"
-                                           TextColor="White"/>
-
-                                </VerticalStackLayout>
-                            </Grid>
-                            <Border.Shadow>
-                                <Shadow
-                            Brush="Black"
-                            Opacity=".9"
-                            Radius="100"
-                            Offset="0,0"/>
-
-                            </Border.Shadow>
-                        </Border>
-
-                    </Grid>
-
-                </DataTemplate>
-            </CarouselView.ItemTemplate>
-
-        </CarouselView>
-
-            <IndicatorView 
-                x:Name="indicatorView"
-                Grid.Row="3"
-                HorizontalOptions="Center"
-                IndicatorColor="#616161"
-                IndicatorSize="8"
-                SelectedIndicatorColor="DarkRed"
-                VerticalOptions="Center"/>
-            <Label Grid.Row="4"
-                Margin="25,5,25,5"
-                FontSize="16"
-                FontFamily="PoppinsSemiBold"   
-                Text="Servicios Recomendados"
-                TextColor="DarkRed"
-                VerticalOptions="Center"/>
-
-            <CollectionView Grid.Row="5" ItemsSource="{Binding Facultades2}">
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout ItemSpacing="25" Orientation="Horizontal"/>
-                    
-                 </CollectionView.ItemsLayout>
-
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid HeightRequest="200" WidthRequest="200">
-                            <Border 
-                                HeightRequest="200"
-                                HorizontalOptions="Center"
-                                Stroke="DarkRed"
-                                StrokeShape="RoundRectangle 20,20,20,20"
-                                StrokeThickness="2"
-                                WidthRequest="200">
-
-                                <Image Aspect="AspectFill" Source="{Binding Image}"/>
-
-                            </Border>
-                            
-
-                    </Grid>
-
-                    </DataTemplate>
-
-                </CollectionView.ItemTemplate>
-
-        </CollectionView>
-
-
-    </Grid>-->
-    <!--<VerticalStackLayout>
-        <Label>FICA</Label>
-        <ImageButton Source="fica.jpg"
-             HeightRequest="140"
-             x:Name="ficaButton"
-             VerticalOptions="Start"
-             Clicked="ficaButton_Clicked"
-             ></ImageButton>
-        <Label>NODO</Label>
-        <ImageButton Source="nodo.jpg"
-         HeightRequest="140"
-         x:Name="nodoButton"
-         VerticalOptions="Center"
-         Clicked="nodoButton_Clicked"
-         ></ImageButton>
-
-    </VerticalStackLayout>-->
+    <Grid>
+       
     <VerticalStackLayout 
-        HorizontalOptions="Center" 
-        VerticalOptions="CenterAndExpand" 
-        Spacing="20" 
-        Padding="30">
-
-        <Label 
+        HorizontalOptions="CenterAndExpand" 
+        VerticalOptions="Start" 
+        Spacing="0" 
+        Padding="0">
+        
+        <Label
+            Text="Facultades"
+            HorizontalOptions="CenterAndExpand"
+            FontFamily="Poppins-SemiBold"
+            FontSize="18"
+            TextColor="DarkRed"
+            
+            ></Label>
+        
+            
+        
+            <Label 
             Text="FICA" 
-            FontSize="24" 
-            FontFamily="Poppins"
+            FontSize="30" 
+            FontFamily="Poppins-Bold"
             FontAttributes="Bold"
             HorizontalOptions="Center" 
             VerticalOptions="Start" 
             TextColor="DarkRed" />
 
         <Frame 
+            Margin="0,0,0,30"
             CornerRadius="20" 
             Padding="0" 
             BackgroundColor="White" 
@@ -195,14 +58,15 @@
 
         <Label 
             Text="NODO" 
-            FontSize="24" 
-            FontFamily="Poppins"
+            FontSize="30" 
+            FontFamily="Poppins-Bold"
             FontAttributes="Bold"
             HorizontalOptions="Center" 
             VerticalOptions="Center" 
             TextColor="DarkRed" />
 
         <Frame 
+            Margin="0,0,0,25"
             CornerRadius="20" 
             Padding="0" 
             BackgroundColor="White" 
@@ -213,6 +77,7 @@
             HorizontalOptions="Center"
             VerticalOptions="Center">
             <ImageButton 
+                
                 Source="nodo2.jpg" 
                 Aspect="AspectFill"
                 WidthRequest="185" 
@@ -222,6 +87,17 @@
                 BackgroundColor="Transparent"
                 Clicked="nodoButton_Clicked" />
         </Frame>
+         
+           
+        
+       
+        <Image
+        Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png"
+        WidthRequest="85"
+        HorizontalOptions="Start"
+        Margin="-80,0,0,0"/>
+
     </VerticalStackLayout>
-    
+    </Grid>
 </ContentPage>
+    

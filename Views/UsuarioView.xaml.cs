@@ -8,7 +8,12 @@ namespace BLOGSOCIALUDLA.Views
     public partial class UsuarioView : ContentPage
     {
         private User _currentUser;
+        //public UsuarioView()
+        //{
+        //    InitializeComponent();
 
+          
+        //}
         public UsuarioView(string username)
         {
             InitializeComponent();

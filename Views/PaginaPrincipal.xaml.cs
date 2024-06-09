@@ -10,8 +10,8 @@ public partial class PaginaPrincipal : ContentPage
     //Copia de la coleccion para mostrar las imagenes en un orden diferente
 
     public PaginaPrincipal()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         //InitializeFacultades();
         BindingContext = this;
     }
@@ -38,12 +38,18 @@ public partial class PaginaPrincipal : ContentPage
             new Facultad{Name= "NODO", ReadTime= new TimeSpan(0,3,0), Image= "nodo.jpg"},
             new Facultad{Name= "Escuela de Música", ReadTime= new TimeSpan(0,2,0), Image= "musica.jpg"}
         };
-        
+
     }
 
     private void Salir(object sender, EventArgs e)
     {
 
         Navigation.PopAsync();
+    }
+
+    private async void irUsuario(object sender, EventArgs e)
+    {
+       
+        await Navigation.PushAsync(new UsuarioView());
     }
 }
