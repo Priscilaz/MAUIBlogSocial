@@ -1,23 +1,18 @@
+// PostNodo.xaml.cs
 using Microsoft.Maui.Controls;
-using System;
-using System.Collections.ObjectModel;
-using System.Threading.Tasks;
 using BLOGSOCIALUDLA.Models;
-//using System.Windows.Services.Maps;
-
+using System.Collections.ObjectModel;
 
 namespace BLOGSOCIALUDLA.Views
 {
     public partial class PostNodo : ContentPage
-
     {
         public ObservableCollection<Post> Posts { get; set; }
 
         public PostNodo()
         {
-          
             InitializeComponent();
-            Posts = new ObservableCollection<Post>(DataPost.Posts);
+            Posts = new ObservableCollection<Post>(DataPostNodo.PostsNodo);
             BindingContext = this;
         }
 
@@ -39,7 +34,7 @@ namespace BLOGSOCIALUDLA.Views
 
         private void NuevaPage_PostAgregado(object sender, Post e)
         {
-            DataPost.AgregarPost(e);
+            DataPostNodo.AgregarPostNodo(e);
             Posts.Add(e);
         }
 
@@ -47,9 +42,5 @@ namespace BLOGSOCIALUDLA.Views
         {
             await Navigation.PopAsync();
         }
-
-       
     }
 }
-    
-

@@ -11,7 +11,7 @@ namespace BLOGSOCIALUDLA.Views
         public PostFica()
         {
             InitializeComponent();
-            Posts = new ObservableCollection<Post>(DataPost.Posts);
+            Posts = new ObservableCollection<Post>(DataPostFica.PostsFica);
             BindingContext = this;
         }
 
@@ -33,7 +33,7 @@ namespace BLOGSOCIALUDLA.Views
 
         private void NuevaPage_PostAgregado(object sender, Post e)
         {
-            DataPost.AgregarPost(e);
+            DataPostFica.AgregarPostFica(e);
             Posts.Add(e);
         }
     }
