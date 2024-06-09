@@ -3,161 +3,69 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BLOGSOCIALUDLA.Views.PostFica"
              Title="PostFica">
-
     <ScrollView>
         <Grid BackgroundColor="white">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
-                
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0" BackgroundColor="White">
                 <VerticalStackLayout Margin="10,20,10,0" HorizontalOptions="Center">
-
                     <Label FontAttributes="Bold"
-               WidthRequest="233"
-               HeightRequest="40"
-               FontFamily="PoppinsBold"
-               FontSize="30"
-               Text="FICA"
-               HorizontalOptions="StartAndExpand"
-               TextColor="DarkRed"
-               Margin="35,0,0,20"/>
-
-
-                    <Label TextColor="#636363"
-                   FontFamily="Poppins-Medium" 
-                   Margin="35,0,25,20" 
-                   FontSize="13.5"
-                   Text="Formar personas competentes, emprendedoras y con visión global en el ámbito de las ciencias y la ingeniería, capaces de plantear soluciones innovadoras fundamentadas en la tecnología, con base en principios y valores éticos."/>
-
-                    <Label FontAttributes="Bold"
-                        WidthRequest="233"
-                        HeightRequest="25"
-                        FontFamily="Poppins-Bold"
-                        FontSize="20"
-                        HorizontalOptions="Center"
-                        Text="VISIÓN"
-                        TextColor="DarkRed"
-                        HorizontalTextAlignment="Center"
-                        Margin="0,0,0,15"/>
-
-                    <Frame Background="White" HeightRequest="190" WidthRequest="300" Margin="0,0,0,25"  >
-                        <Label 
-                  TextColor="#636363"
-                  FontSize="13.5"
-                  HorizontalTextAlignment="Center"
-                  Margin="0,5,0,0" FontFamily="Poppins-Medium" 
-                  Text="Ser un referente a nivel nacional e internacional en el ámbito de la ingeniería y ciencias aplicadas por su aporte al desarrollo de la sociedad a través de la excelencia académica, la investigación, la innovación y tecnología de vanguardia."
-              />
-
-                    </Frame>
-
-
-                    <Grid Margin="25,0,25,50">
-                        <Border    
-                        StrokeShape="RoundRectangle 10,10,10,10"
-                        Stroke="#FFBEBE"
-                            ></Border>
-                            <StackLayout>
-                            <Label FontAttributes="Bold"
-                                   
-                                 WidthRequest="233"
-                                 HeightRequest="30"
-                                 FontFamily="Poppins-SemiBold"
-                                 FontSize="15"
-                                 Text="Escribe un comentario"
-                                 TextColor="DarkRed"
-                                 HorizontalTextAlignment="Start"
-                                 Margin="-50,10,0,0"/>
-
-                            <Grid  Margin="0,0,0,20">
-                                <Border 
-                                  Grid.RowSpan="3"
-                                  BackgroundColor="White"
-                                  HeightRequest="100"
-         
-                                  StrokeShape="RoundRectangle 10,10,10,10"
-                                  StrokeThickness="1"
-                                  WidthRequest="300">
-                                    <Entry 
-                                       x:Name="comentarioEntry"
-                                       VerticalOptions="StartAndExpand"
-                                       HorizontalOptions="Fill"
-                                       Margin="25,0,20,50"
-                                       TextColor="Black"
-                                       Placeholder="Escribe un comentario"
-                                       FontSize="13"
-                                       FontFamily="PoppinsRegular"/>
-                                    
-                                </Border>
-                               
-                            </Grid>
-                            <Button BackgroundColor="#8D2232"
-                                  WidthRequest="200"
-                                  HeightRequest="40"
-                                  FontFamily="PoppinsSemiBold"
-                                  FontSize="12"
-                                  Text="Añadir Comentario"
-                                  TextColor="White"
-                                  Margin="0,0,0,25"
-                                  Clicked="ClickComentarioFica"
-                                  HorizontalOptions="Center"
-                                     />     
-
-                            <Label Text="Comentarios:"
-                                FontSize="15"
-                                FontFamily="Poppins-SemiBold"
-                                TextColor="DarkRed"
-                                Margin="25,0,0,0"
-                                 >
-
-                            </Label>
-                                <ListView x:Name="listaComentarios"
-                                     RowHeight="80"
-                                     ItemSelected="OnClickShowDetails">     
-                                    <ListView.ItemTemplate>
-                                        <DataTemplate>
-                                            <ViewCell>
-                                                <StackLayout Orientation="Vertical" Padding="10">
-                                                    <Label  Margin="25,0,10,0" FontFamily="Poppins-Regular" Text="{Binding Contenido}"
-                                                      FontSize="13"/>
-                                                </StackLayout>
-                                            </ViewCell>
-                                        </DataTemplate>
-                                    </ListView.ItemTemplate>
-                                </ListView>
-
-
-                        </StackLayout>
-                    </Grid>
-                        
-                        
-
-                   
-
-                    
+                           WidthRequest="233"
+                           HeightRequest="40"
+                           FontFamily="PoppinsBold"
+                           FontSize="30"
+                           Text="FICA"
+                           HorizontalOptions="StartAndExpand"
+                           TextColor="DarkRed"
+                           Margin="35,0,0,20"/>
+                    <ListView x:Name="listaPosts"
+                              ItemSelected="OnPostSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Vertical" Padding="10">
+                                        <Label Margin="25,0,10,0" FontFamily="Poppins-Regular" Text="{Binding Titulo}"
+                                               FontSize="18" FontAttributes="Bold"/>
+                                        <Label Margin="25,0,10,0" FontFamily="Poppins-Regular" Text="{Binding Contenido}"
+                                               FontSize="14"/>
+                                        <ListView x:Name="listaComentarios"
+                                                  ItemsSource="{Binding Comentarios}">
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <ViewCell>
+                                                        <Label Margin="25,0,10,0" FontFamily="Poppins-Regular" Text="{Binding Contenido}"
+                                                               FontSize="12"/>
+                                                    </ViewCell>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                        <Entry x:Name="comentarioEntry"
+                                               Placeholder="Escribe tu comentario"
+                                               FontFamily="PoppinsRegular"
+                                               FontSize="15"
+                                               Margin="25,0,10,0"/>
+                                        <Button Text="Añadir Comentario" Clicked="OnAddComment" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                     <Button BackgroundColor="#8D2232"
-                   WidthRequest="250"
-                   HeightRequest="50"
-                   FontFamily="PoppinsSemiBold"
-                   FontSize="Header"
-                   Text="Añadir Post"
-                   TextColor="White"
-                   Margin="0,0,0,80"
-                   Clicked="ClickPostFica"/>
-
-
-                    <!-- Metodo del compa-->
-                   
+                            WidthRequest="250"
+                            HeightRequest="50"
+                            FontFamily="PoppinsSemiBold"
+                            FontSize="Header"
+                            Text="Añadir Post"
+                            TextColor="White"
+                            Margin="0,0,0,80"
+                            Clicked="ClickPostFica"/>
                 </VerticalStackLayout>
             </Grid>
         </Grid>
     </ScrollView>
-
 </ContentPage>
-
-

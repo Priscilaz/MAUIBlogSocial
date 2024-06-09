@@ -50,6 +50,6 @@ public partial class PaginaPrincipal : ContentPage
     private async void irUsuario(object sender, EventArgs e)
     {
        
-        await Navigation.PushAsync(new UsuarioView());
+        //await Navigation.PushAsync(new UsuarioView());
     }
 }
