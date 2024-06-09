@@ -7,13 +7,23 @@ using System.Threading.Tasks;
 
 using System.Collections.Generic;
 
+using System.Collections.Generic;
+
 namespace BLOGSOCIALUDLA.Models
 {
     public static class DataPost
     {
         public static List<Post> Posts = new List<Post>
         {
-            new Post {Titulo = "Primer Post Prueba", Contenido = "Hola ¿Como están?." }
+            new Post
+            {
+                Titulo = "Primer Post Prueba",
+                Contenido = "Hola ¿Como están?.",
+                Comentarios = new List<Comentario>
+                {
+                    new Comentario { Contenido = "Primer comentario." }
+                }
+            }
         };
     }
 }
