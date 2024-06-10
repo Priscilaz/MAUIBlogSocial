@@ -11,7 +11,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-
+            <!--Proyecto terminado-->
             <StackLayout Margin="10,20,10,0" HorizontalOptions="Center">
                 <Label FontAttributes="Bold"
                        WidthRequest="233"
