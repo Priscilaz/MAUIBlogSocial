@@ -4,16 +4,35 @@
              x:Class="BLOGSOCIALUDLA.Views.UsuarioView"
              Title="Perfil de Usuario">
 
-    <StackLayout Padding="20">
-        <Label Text="Perfil de Usuario" FontSize="24" HorizontalOptions="Center" />
-        <Label Text="Nombres:" FontSize="18" />
-        <Label x:Name="NombresLabel" FontSize="18" />
-        <Label Text="Apellidos:" FontSize="18" />
-        <Label x:Name="ApellidosLabel" FontSize="18" />
-        <Label Text="Número de Teléfono:" FontSize="18" />
-        <Label x:Name="NumeroTelefonoLabel" FontSize="18" />
-        <Label Text="Correo:" FontSize="18" />
-        <Label x:Name="CorreoLabel" FontSize="18" />
+    <StackLayout Orientation="Vertical" Spacing="20" Padding="20">
+        <Label Text="Perfil de Usuario" 
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Frame BorderColor="{AppThemeBinding Light=Black, Dark=White}">
+            <StackLayout Orientation="Vertical" Spacing="10">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Nombres:" FontSize="18" FontAttributes="Bold" />
+                    <Label x:Name="NombresLabel" FontSize="18" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Apellidos:" FontSize="18" FontAttributes="Bold" />
+                    <Label x:Name="ApellidosLabel" FontSize="18" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Número de Teléfono:" FontSize="18" FontAttributes="Bold" />
+                    <Label x:Name="NumeroTelefonoLabel" FontSize="18" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Correo:" FontSize="18" FontAttributes="Bold" />
+                    <Label x:Name="CorreoLabel" FontSize="18" />
+                </StackLayout>
+            </StackLayout>
+        </Frame>
     </StackLayout>
 
 </ContentPage>
