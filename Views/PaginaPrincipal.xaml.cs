@@ -5,7 +5,6 @@ namespace BLOGSOCIALUDLA.Views;
 
 public partial class PaginaPrincipal : ContentPage
 {
-
     public ObservableCollection<Facultad> Facultades { get; set; }
     //Copia de la coleccion para mostrar las imagenes en un orden diferente
 
@@ -27,6 +26,19 @@ public partial class PaginaPrincipal : ContentPage
         await Navigation.PushAsync(new PostNodo());
     }
 
+    private async void IrPerfilButton_Clicked(object sender, EventArgs e)
+    {
+        if (UserData.CurrentUser != null)
+        {
+            await Navigation.PushAsync(new UsuarioView(UserData.CurrentUser.Username));
+        }
+        else
+        {
+            await DisplayAlert("Error", "No se ha encontrado el usuario actual.", "OK");
+        }
+    }
+
+
     private void InitializeFacultades()
     {
         Facultades = new ObservableCollection<Facultad>
@@ -38,14 +50,10 @@ public partial class PaginaPrincipal : ContentPage
             new Facultad{Name= "NODO", ReadTime= new TimeSpan(0,3,0), Image= "nodo.jpg"},
             new Facultad{Name= "Escuela de Música", ReadTime= new TimeSpan(0,2,0), Image= "musica.jpg"}
         };
-
     }
 
     private void Salir(object sender, EventArgs e)
     {
-
         Navigation.PopAsync();
     }
-
-     
 }
