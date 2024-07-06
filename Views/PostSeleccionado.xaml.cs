@@ -1,4 +1,5 @@
 using BLOGSOCIALUDLA.Models;
+using BLOGSOCIALUDLA.ViewModels;
 using System.Collections.ObjectModel;
 
 namespace BLOGSOCIALUDLA.Views
@@ -12,27 +13,10 @@ namespace BLOGSOCIALUDLA.Views
         public PostSeleccionado(Post post)
         {
             InitializeComponent();
+            BindingContext = new PostSeleccionadoViewModel(post);
 
-            _post = post;
-            tituloLabel.Text = post.Titulo;
-            contenidoLabel.Text = post.Contenido;
-
-            Comentarios = new ObservableCollection<Comentario>(post.Comentarios);
-            comentariosCollectionView.ItemsSource = Comentarios;
              }
 
-        private void EnviarComentario_Clicked(object sender, EventArgs e)
-        {
-            var nuevoComentario = new Comentario
-            {
-                Contenido = nuevoComentarioEntry.Text,
-                Fecha = DateTime.Now
-            };
-
-            _post.Comentarios.Add(nuevoComentario);
-            Comentarios.Add(nuevoComentario);
-
-            nuevoComentarioEntry.Text = string.Empty;
-        }
+       
     }
 }

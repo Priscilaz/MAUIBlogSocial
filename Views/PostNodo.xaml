@@ -72,7 +72,9 @@
                          WidthRequest="250"
                          ItemsSource="{Binding Posts}"
                          ItemDisplayBinding="{Binding Titulo}"
-                         SelectedIndexChanged="PostPicker_SelectedIndexChanged" />
+                         SelectedItem="{Binding SelectedPost, Mode=TwoWay}">
+                        
+                    </Picker>
 
 
                     <Button BackgroundColor="#8D2232"
@@ -83,7 +85,7 @@
                          Text="Añadir Post"
                          TextColor="White"
                          Margin="0,20,0,80"
-                         Clicked="ClickPostNodo" />
+                        Command="{Binding AddPostCommand}" />
 
 
                 </VerticalStackLayout>
