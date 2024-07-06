@@ -1,3 +1,5 @@
+using BLOGSOCIALUDLA.ViewModels;
+
 namespace BLOGSOCIALUDLA.Views;
 
 public partial class LoginView : ContentPage
@@ -5,16 +7,7 @@ public partial class LoginView : ContentPage
 	public LoginView()
 	{
 		InitializeComponent();
-	}
+        BindingContext = new LoginViewModel();	}
 
-    private void ClickLogin(object sender, EventArgs e)
-    {
-		Navigation.PushAsync(new InicioSesion());
-       
-    }
-
-    private void ClickRegistro(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new RegistroUsuario());
-    }
+  
 }

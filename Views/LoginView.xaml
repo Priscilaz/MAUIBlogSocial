@@ -50,7 +50,7 @@
                         FontFamily="PoppinsSemiBold" 
                         FontSize="Medium"
                         Text="Iniciar Sesión"
-                        Clicked="ClickLogin"
+                        Command="{Binding NavigateToLoginCommand }"
                         TextColor="White"
                         Margin="0,0,0,20"
                          
@@ -72,7 +72,7 @@
                  FontFamily="PoppinsMedium" 
                  FontSize="13"
                  Text="Registrate"
-                 Clicked="ClickRegistro"
+                        Command="{Binding NavigateToRegisterCommand }"
                  TextColor="White"
                  Margin="0,0,0,40"
           

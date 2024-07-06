@@ -14,7 +14,8 @@ namespace BLOGSOCIALUDLA.Views
 
         private async void ClickAñadirPost(object sender, EventArgs e)
         {
-            string titulo = TituloPost.Text;
+            string titulo = TituloPost.Text;    
+                
             string contenido = ContenidoPost.Text;
             if (string.IsNullOrEmpty(titulo) || string.IsNullOrEmpty(contenido))
             {

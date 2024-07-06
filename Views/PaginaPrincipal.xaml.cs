@@ -1,3 +1,4 @@
+using BLOGSOCIALUDLA.Data;
 using BLOGSOCIALUDLA.Models;
 using System.Collections.ObjectModel;
 
@@ -28,14 +29,8 @@ public partial class PaginaPrincipal : ContentPage
 
     private async void IrPerfilButton_Clicked(object sender, EventArgs e)
     {
-        if (UserData.CurrentUser != null)
-        {
-            await Navigation.PushAsync(new UsuarioView(UserData.CurrentUser.Username));
-        }
-        else
-        {
-            await DisplayAlert("Error", "No se ha encontrado el usuario actual.", "OK");
-        }
+       await Navigation.PushAsync(new UsuarioView());
+
     }
 
 

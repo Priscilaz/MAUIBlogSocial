@@ -19,7 +19,7 @@ namespace BLOGSOCIALUDLA.Views
 
             Comentarios = new ObservableCollection<Comentario>(post.Comentarios);
             comentariosCollectionView.ItemsSource = Comentarios;
-        }
+             }
 
         private void EnviarComentario_Clicked(object sender, EventArgs e)
         {

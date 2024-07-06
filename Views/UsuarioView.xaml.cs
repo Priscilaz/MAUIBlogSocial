@@ -1,4 +1,7 @@
+using BLOGSOCIALUDLA.Data;
 using BLOGSOCIALUDLA.Models;
+using BLOGSOCIALUDLA.ViewModels;
+
 //using BLOGSOCIALUDLA.Models.BLOGSOCIALUDLA.Models;
 using Microsoft.Maui.Controls;
 using System;
@@ -8,29 +11,18 @@ namespace BLOGSOCIALUDLA.Views
 {
     public partial class UsuarioView : ContentPage
     {
-        private User _currentUser;
+        public List<User> Usuarios { get; set; }
+     
 
-        public UsuarioView(string username)
+        public UsuarioView()
         {
             InitializeComponent();
-            DatosDelUsuario(username);
+            BindingContext = new UsuarioViewModel();
+
+  
+            
         }
 
-        private void DatosDelUsuario(string username)
-        {
-            _currentUser = UserData.Users.FirstOrDefault(user => user.Username == username);
-
-            if (_currentUser != null)
-            {
-                NombresLabel.Text = _currentUser.Nombres;
-                ApellidosLabel.Text = _currentUser.Apellidos;
-                NumeroTelefonoLabel.Text = _currentUser.NumeroTelefono;
-                CorreoLabel.Text = _currentUser.Username;
-            }
-            else
-            {
-                DisplayAlert("Error", "Usuario no encontrado.", "OK");
-            }
-        }
+       
     }
 }
