@@ -92,6 +92,11 @@
                 HorizontalOptions="Center"
                 VerticalOptions="End"
                 Clicked="IrPerfilButton_Clicked" />
+            <Button
+        BackgroundColor="DarkRed"
+        Text="Mapa de Sedes"
+        Clicked="IrAMaps"
+        />  
 
             <Image
                 Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png"

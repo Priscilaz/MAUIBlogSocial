@@ -51,4 +51,9 @@ public partial class PaginaPrincipal : ContentPage
     {
         Navigation.PopAsync();
     }
+
+    private async void IrAMaps(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new MapPage());
+    }
 }

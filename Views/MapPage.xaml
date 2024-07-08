@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+        xmlns:sensors="clr-namespace:Microsoft.Maui.Devices.Sensors;assembly=Microsoft.Maui.Essentials"
+            
+             x:Class="BLOGSOCIALUDLA.Views.MapPage"
+             Title="MapPage">
+
+
+    <maps:Map x:Name="map"
+           IsTrafficEnabled="true"
+           MapType="Hybrid"
+           IsShowingUser="True"
+           IsZoomEnabled="True"
+           IsScrollEnabled="True"
+           >
+        <maps:Map.Pins>
+            <maps:Pin Label="UdlaPark"
+               Address="UdlaPark"
+                   Type="Place">
+                <maps:Pin.Location>
+                    <sensors:Location>
+                        <x:Arguments>
+                            <x:Double>-0.16273496794750528</x:Double>
+                            <x:Double>-78.45951152001672</x:Double>
+
+                        </x:Arguments>
+
+                    </sensors:Location>
+                </maps:Pin.Location>
+
+            </maps:Pin>
+            <maps:Pin Label="Udla Granados"
+          Address="Udla Granados"
+       Type="Place">
+                <maps:Pin.Location>
+                    <sensors:Location>
+                        <x:Arguments>
+                            <x:Double>-0.16709063935709634</x:Double>
+                            <x:Double>-78.47265385767169</x:Double>
+
+                        </x:Arguments>
+
+                    </sensors:Location>
+                </maps:Pin.Location>
+
+            </maps:Pin>
+            <maps:Pin Label="Udla Colón"
+             Address="Udla Colón"
+             Type="Place">
+                <maps:Pin.Location>
+                    <sensors:Location>
+                        <x:Arguments>
+                            <x:Double>-0.20221748215860486</x:Double>
+                            <x:Double>-78.4851804423283</x:Double>
+
+                        </x:Arguments>
+
+                    </sensors:Location>
+                </maps:Pin.Location>
+
+            </maps:Pin>
+            <maps:Pin Label="CPA UDLA"
+ Address="CPA UDLA"
+ Type="Place">
+                <maps:Pin.Location>
+                    <sensors:Location>
+                        <x:Arguments>
+                            <x:Double>-0.20062030995412103</x:Double>
+                            <x:Double>-78.48193532543306</x:Double>
+
+                        </x:Arguments>
+
+                    </sensors:Location>
+                </maps:Pin.Location>
+
+            </maps:Pin>
+
+
+        </maps:Map.Pins>
+
+
+
+    </maps:Map>
+</ContentPage>
