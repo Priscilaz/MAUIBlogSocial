@@ -51,6 +51,7 @@ namespace BLOGSOCIALUDLA.ViewModels
             var registro = await App.BancoDatos.UsuarioDataTable.GuardarUsuario(Usuario);
             if (registro > 0)
             {
+
                 await Application.Current.MainPage.Navigation.PopAsync();
             }
         }

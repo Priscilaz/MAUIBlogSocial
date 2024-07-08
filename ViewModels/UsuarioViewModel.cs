@@ -23,7 +23,7 @@ namespace BLOGSOCIALUDLA.ViewModels
             }
         }
 
-        public Command CerrarSesionCommand { get; }
+        public Command CerrarSesionCommand { get; set; }
 
         public UsuarioViewModel()
         {
@@ -38,7 +38,8 @@ namespace BLOGSOCIALUDLA.ViewModels
 
         private async void CerrarSesion()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new Views.LoginView());
+            await Application.Current.MainPage.Navigation.PushAsync(new LoginView());
+           
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

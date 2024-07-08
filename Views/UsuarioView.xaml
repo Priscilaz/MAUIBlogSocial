@@ -94,7 +94,8 @@
                     Text="Cerrar Sesión"
                     FontFamily="PoppinsSemiBold"
                     BackgroundColor="DarkRed"
-                    Command="{Binding CerrarSesionCommand}"
+        
+                    Command="{Binding CerrarSesionCommand }"
                     >
 
                     </Button>

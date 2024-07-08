@@ -73,7 +73,7 @@
 
                         <Entry x:Name="Apellido"
                         FontFamily="PoppinsMedium"
-                        Placeholder="Jose "
+                        Placeholder="Perez "
                         Keyboard="Email"
                         Text="{Binding Usuario.Apellido}"
                         FontSize="15"
@@ -118,7 +118,7 @@
 
                         <Entry x:Name="Contrasena"
                       FontFamily="PoppinsMedium"
-                      Placeholder="blogsocial@udla.edu.ec"
+                      Placeholder="mB%323"
                       Keyboard="Email"
                       Text="{Binding Usuario.Password}"
                       FontSize="15"

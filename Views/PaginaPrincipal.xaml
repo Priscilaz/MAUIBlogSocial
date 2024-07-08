@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BLOGSOCIALUDLA.Views.PaginaPrincipal"
              Title="Página Principal" BackgroundColor="White">
-
+    <ScrollView>
     <Grid>
         <VerticalStackLayout 
             HorizontalOptions="CenterAndExpand" 
@@ -91,18 +91,27 @@
                 CornerRadius="20"
                 HorizontalOptions="Center"
                 VerticalOptions="End"
-                Clicked="IrPerfilButton_Clicked" />
-            <Button
-        BackgroundColor="DarkRed"
-        Text="Mapa de Sedes"
-        Clicked="IrAMaps"
-        />  
+                Clicked="IrPerfilButton_Clicked"
+                Margin="0,0,0,20"
+                />
 
-            <Image
+                <Button
+         BackgroundColor="DarkRed"
+        Text="Mapa de Sedes"
+        FontSize="18"
+        FontFamily="Poppins-SemiBold"
+        Clicked="IrAMaps"
+        HorizontalOptions="Center"
+        VerticalOptions="End"
+         CornerRadius="20"
+/>
+
+                <Image
                 Source="https://media.primicias.ec/2022/02/04094454/RGB_LOGO-UDLA_2021_ROJO.png"
                 WidthRequest="85"
                 HorizontalOptions="Start"
-                Margin="-80,0,0,0"/>
+                Margin="55,20,0,0"/>
         </VerticalStackLayout>
     </Grid>
+    </ScrollView>
 </ContentPage>
