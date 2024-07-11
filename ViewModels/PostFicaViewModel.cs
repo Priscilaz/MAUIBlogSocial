@@ -20,6 +20,7 @@ namespace BLOGSOCIALUDLA.ViewModels
         public ObservableCollection<Post> Posts { get; set; }
         public ICommand AddPostCommand { get; }
         public ICommand AddMapCommand { get; }
+        public ICommand AddPerfilCommand { get; }
 
         public ICommand PostSelectedCommand { get; }
         public ICommand BackCommand { get; }
@@ -46,7 +47,7 @@ namespace BLOGSOCIALUDLA.ViewModels
             Posts = new ObservableCollection<Post>(DataPostFica.PostsFica);
             AddPostCommand = new Command(async () => await OnAddPost());
             AddMapCommand = new Command(async () => await IrAMap());
-
+            AddPerfilCommand= new Command(async () => await IrAPerfil());   
             PostSelectedCommand = new Command<Post>(async (post) => await OnPostSelected(post));
             BackCommand = new Command(async () => await OnBack());
         }
@@ -55,10 +56,15 @@ namespace BLOGSOCIALUDLA.ViewModels
             //funcionamiento del picker para poder elefir le post
             var nuevaPage = new AddPostPage();
             nuevaPage.PostAgregado += NuevaPage_PostAgregado;
+           
             await Application.Current.MainPage.Navigation.PushAsync(nuevaPage);
         }
         private async Task IrAMap() {
             await App.Current.MainPage.Navigation.PushAsync(new MapPage());
+        }
+        private async Task IrAPerfil()
+        {
+            await App.Current.MainPage.Navigation.PushAsync(new UsuarioView());
         }
         private void NuevaPage_PostAgregado(object sender, Post e)
         {

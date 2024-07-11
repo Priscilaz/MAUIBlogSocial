@@ -12,17 +12,20 @@ namespace BLOGSOCIALUDLA.Views
     public partial class UsuarioView : ContentPage
     {
         public List<User> Usuarios { get; set; }
-     
+
 
         public UsuarioView()
         {
             InitializeComponent();
             BindingContext = new UsuarioViewModel();
 
-  
-            
-        }
 
-       
+
+        }
+        private async void IrLogin(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new NavigationPage(new LoginView());
+
+        }
     }
 }

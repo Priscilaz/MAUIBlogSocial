@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace BLOGSOCIALUDLA.ViewModels
 {
@@ -23,12 +24,14 @@ namespace BLOGSOCIALUDLA.ViewModels
             }
         }
 
-        public Command CerrarSesionCommand { get; set; }
+        public ICommand AddCerrarSesionCommand { get; }
 
         public UsuarioViewModel()
         {
-            CerrarSesionCommand = new Command(CerrarSesion);
+
             LoadUsuarios();
+            AddCerrarSesionCommand = new Command(async () => await CerrarSesion());
+           
         }
 
         private async void LoadUsuarios()
@@ -36,9 +39,10 @@ namespace BLOGSOCIALUDLA.ViewModels
             Usuarios = await App.BancoDatos.UsuarioDataTable.ListaUsuarios();
         }
 
-        private async void CerrarSesion()
+        private async Task CerrarSesion()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new LoginView());
+            await App.Current.MainPage.Navigation.PushAsync(new LoginView());
+             
            
         }
 

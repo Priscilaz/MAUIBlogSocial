@@ -27,9 +27,14 @@
                     FontFamily="Poppins-Medium"
                     Text="{Binding Contenido}" 
                     FontSize="16"
-                    Margin="30,0" />
-                    
-                    
+                    Margin="30,0,0,10" />
+                    <Label Text="{Binding Fecha}" 
+                    FontSize="12" 
+                    FontFamily="Poppins-Medium"
+                     Margin="30,0,0,20" 
+                    TextColor="Grey" />
+
+
                     <Label
                         Text="Ingresa un Comentario"
                         FontFamily="Poppins-SemiBold"

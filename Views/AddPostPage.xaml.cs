@@ -1,5 +1,6 @@
 using Microsoft.Maui.Controls;
 using BLOGSOCIALUDLA.Models;
+using System.Globalization;
 
 namespace BLOGSOCIALUDLA.Views
 {
@@ -17,6 +18,7 @@ namespace BLOGSOCIALUDLA.Views
             string titulo = TituloPost.Text;    
                 
             string contenido = ContenidoPost.Text;
+     
             if (string.IsNullOrEmpty(titulo) || string.IsNullOrEmpty(contenido))
             {
                 await DisplayAlert("Error", "Por favor, completa todos los campos.", "OK");
@@ -25,7 +27,8 @@ namespace BLOGSOCIALUDLA.Views
             var newPost = new Post
             {
                 Titulo = titulo,
-                Contenido = contenido
+                Contenido = contenido,
+                FechaPublicacion= DateTime.Now
             };
 
             PostAgregado?.Invoke(this, newPost);

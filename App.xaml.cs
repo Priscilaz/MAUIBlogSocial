@@ -16,9 +16,9 @@ namespace BLOGSOCIALUDLA
             navPage.Background = Colors.DarkRed;
             navPage.BarTextColor = Colors.DarkRed;
 
-            
-            MainPage = new AppShell();
-           
+            MainPage = new NavigationPage(new LoginView());
+            //MainPage = new AppShell();
+
         }
       public static SQLiteData BancoDatos
         {

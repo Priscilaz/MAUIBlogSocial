@@ -88,18 +88,16 @@
                                     Margin="5"
                                         
                                         >
-
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <Frame Margin="10" Padding="10" CornerRadius="10" HasShadow="True" BackgroundColor="White">
-                                        <StackLayout Padding="10">
-                                            <Label Text="{Binding Titulo}" 
-                                                   Detail="{Binding Autor}"
+                                    <StackLayout Padding="10" BackgroundColor="White" Margin="10" Orientation="Vertical">
+                                        <Label Text="{Binding Titulo}" 
+                                               
                                                TextColor="Black" 
                                                FontFamily="Poppins-SemiBold" 
                                                FontSize="15"/>
-                                        </StackLayout>
-                                    </Frame>
+                                           
+                                    </StackLayout>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
                         </CollectionView>
@@ -121,8 +119,17 @@
                             FontSize="Header"
                             Text="Mapa de Sedes"
                             TextColor="White"
-                            Margin="0,20,0,80"
+                            Margin="0,20,0,0"
                               Command="{Binding AddMapCommand}"/>
+                        <Button BackgroundColor="Transparent"
+                            WidthRequest="250"
+                            HeightRequest="50"
+                            FontFamily="PoppinsSemiBold"
+                            FontSize="Header"
+                            Text="Ir a mi perfil"
+                            TextColor="Black"
+                            Margin="0,20,0,80"
+                            Command="{Binding AddPerfilCommand}"/>
                     </VerticalStackLayout>
                 </Grid>
             </Grid>

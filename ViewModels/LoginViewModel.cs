@@ -21,7 +21,7 @@ namespace BLOGSOCIALUDLA.ViewModels
         }
 
         private async void NavigateToLogin()
-        {
+        { 
             await Application.Current.MainPage.Navigation.PushAsync(new Views.InicioSesion());
         }
 

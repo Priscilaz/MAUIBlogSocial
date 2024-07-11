@@ -17,6 +17,7 @@ namespace BLOGSOCIALUDLA.ViewModels
         public ObservableCollection<Comentario> Comentarios { get; set; }
         public string Titulo => _post.Titulo;
         public string Contenido => _post.Contenido;
+        public DateTime Fecha => _post.FechaPublicacion;
 
         public ICommand EnviarComentarioCommand { get; }
 
