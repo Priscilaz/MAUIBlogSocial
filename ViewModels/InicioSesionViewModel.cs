@@ -52,7 +52,7 @@ namespace BLOGSOCIALUDLA.ViewModels
                     return;
                 }
                 App.Usuario = usuario;
-                await Application.Current.MainPage.Navigation.PushAsync(new PaginaPrincipal());
+                await Application.Current.MainPage.Navigation.PushAsync(new PostsPrincipales());
             }
             else
             {

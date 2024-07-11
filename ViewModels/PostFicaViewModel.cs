@@ -19,6 +19,8 @@ namespace BLOGSOCIALUDLA.ViewModels
         public event PropertyChangedEventHandler? PropertyChanged;
         public ObservableCollection<Post> Posts { get; set; }
         public ICommand AddPostCommand { get; }
+        public ICommand AddMapCommand { get; }
+
         public ICommand PostSelectedCommand { get; }
         public ICommand BackCommand { get; }
         private Post _selectedPost;
@@ -31,7 +33,10 @@ namespace BLOGSOCIALUDLA.ViewModels
                 {
                     _selectedPost = value;
                     OnPropertyChanged();
-                    PostSelectedCommand.Execute(_selectedPost);
+                    if (_selectedPost != null)
+                    {
+                        PostSelectedCommand.Execute(_selectedPost);
+                    }
                 }
             }
         }
@@ -40,6 +45,8 @@ namespace BLOGSOCIALUDLA.ViewModels
         {
             Posts = new ObservableCollection<Post>(DataPostFica.PostsFica);
             AddPostCommand = new Command(async () => await OnAddPost());
+            AddMapCommand = new Command(async () => await IrAMap());
+
             PostSelectedCommand = new Command<Post>(async (post) => await OnPostSelected(post));
             BackCommand = new Command(async () => await OnBack());
         }
@@ -50,7 +57,9 @@ namespace BLOGSOCIALUDLA.ViewModels
             nuevaPage.PostAgregado += NuevaPage_PostAgregado;
             await Application.Current.MainPage.Navigation.PushAsync(nuevaPage);
         }
-
+        private async Task IrAMap() {
+            await App.Current.MainPage.Navigation.PushAsync(new MapPage());
+        }
         private void NuevaPage_PostAgregado(object sender, Post e)
         {
             DataPostFica.AgregarPostFica(e);
