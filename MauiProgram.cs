@@ -26,7 +26,7 @@ namespace BLOGSOCIALUDLA
 
             object value = builder.Services.AddHttpClient<ApiService>(client =>
             {
-                client.BaseAddress = new Uri("https://8dcj0g5n-5273.use2.devtunnels.ms/");
+                client.BaseAddress = new Uri("http://localhost:5273");
             });
 #if DEBUG
             builder.Logging.AddDebug();

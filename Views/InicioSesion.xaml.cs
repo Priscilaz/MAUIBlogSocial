@@ -3,19 +3,18 @@ using System;
 using System.Linq;
 using BLOGSOCIALUDLA.Data;
 using BLOGSOCIALUDLA.ViewModels;
-//using BLOGSOCIALUDLA.Models.BLOGSOCIALUDLA.Models;
 
 namespace BLOGSOCIALUDLA.Views
 {
     public partial class InicioSesion : ContentPage
     {
         public InicioSesion()
-
         {
-            BindingContext = new InicioSesionViewModel();
+            var apiService = new ApiService(new HttpClient());
+
+            BindingContext = new InicioSesionViewModel(apiService);
 
             InitializeComponent();
         }
-        
     }
 }
