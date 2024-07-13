@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+ 
 
 namespace BLOGSOCIALUDLA
 {
@@ -23,8 +24,12 @@ namespace BLOGSOCIALUDLA
 
                 });
 
+            object value = builder.Services.AddHttpClient<ApiService>(client =>
+            {
+                client.BaseAddress = new Uri("https://8dcj0g5n-5273.use2.devtunnels.ms/");
+            });
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

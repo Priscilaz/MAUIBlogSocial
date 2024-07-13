@@ -11,6 +11,7 @@ namespace BLOGSOCIALUDLA.ViewModels
 {
     public class InicioSesionViewModel : INotifyPropertyChanged
     {
+        private readonly ApiService _apiService;
         private string _username;
         public string Username
         {
@@ -31,8 +32,9 @@ namespace BLOGSOCIALUDLA.ViewModels
                 OnPropertyChanged();
             }
         }
-        public InicioSesionViewModel()
+        public InicioSesionViewModel(ApiService apiService)
         {
+            _apiService = apiService;
             IniciarSesionCommand = new Command(async () => await IniciarSesion());
             RegistroCommand = new Command(NavegarRegistro);
 
